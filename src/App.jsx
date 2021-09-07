@@ -1,43 +1,55 @@
-import React, { useState } from 'react'
-import logo from './logo.svg'
-import './App.css'
+import React from 'react';
+
+import '@fontsource/roboto';
+import { Typography } from '@material-ui/core';
+
+import Header from './components/Header.jsx';
+import ContentLayout from './components/ContentLayout.jsx';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello Vite + React!</p>
-        <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
-            count is: {count}
-          </button>
-        </p>
-        <p>
-          Edit <code>App.jsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          {' | '}
-          <a
-            className="App-link"
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vite Docs
-          </a>
-        </p>
-      </header>
+      <Header />
+      <ContentLayout>
+        <Typography variant="body1" gutterBottom>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos blanditiis tenetur
+          unde suscipit, quam beatae rerum inventore consectetur, neque doloribus, cupiditate numquam
+          dignissimos laborum fugiat deleniti? Eum quasi quidem quibusdam.
+        </Typography>
+
+        <iframe
+          width="100%"
+          height="126"
+          frameborder="0"
+          src="https://observablehq.com/embed/aff01d184f7d36d5?cells=gridcolor"
+        />
+
+        <Typography variant="body1" gutterBottom>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos blanditiis tenetur
+          unde suscipit, quam beatae rerum inventore consectetur, neque doloribus.
+        </Typography>
+
+        <iframe
+          width="100%"
+          height="596"
+          frameborder="0"
+          src="https://observablehq.com/embed/aff01d184f7d36d5?cells=gridviewLegume"
+        />
+
+        <Typography variant="body1" gutterBottom>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos blanditiis tenetur
+          unde suscipit, quam beatae rerum inventore consectetur, neque doloribus, cupiditate numquam
+          dignissimos laborum fugiat deleniti? Eum quasi quidem quibusdam.
+        </Typography>
+
+        <iframe
+          width="100%"
+          height="616"
+          frameborder="0"
+          src="https://observablehq.com/embed/aff01d184f7d36d5?cells=gridviewFruit"
+        />
+      </ContentLayout>
+      
     </div>
   )
 }
