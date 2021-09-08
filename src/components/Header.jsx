@@ -1,21 +1,20 @@
 import React from 'react';
 
-import { Container, Grid, Box, Typography } from '@material-ui/core';
+import { Grid, Box, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
 import SmileyAnimation from './SmileysAnimation';
 
 import { emojisFood } from '../settings';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = headerHeight => makeStyles(theme => ({
   coloredHeader: {
     backgroundColor: theme.palette.primary.main,
-    borderBottom: "4px solid lightgrey",
-    height: '500px',
+    height: `${headerHeight}px`,
     position: 'relative',
+    marginBottom: theme.spacing(4),
   },
-  title: {
-    color: 'white',
+  titleContainer: {
     margin: theme.spacing(0, 0, 5, 0),
     textAlign: 'center',
     position: 'absolute',
@@ -24,26 +23,35 @@ const useStyles = makeStyles(theme => ({
     left: '50%',
     transform: 'translate(-50%, 0%)',
   },
+  title : {
+    color: theme.palette.primary.main,
+  },
+  subtitle: {
+    color: 'white',
+  },
   titleText: {
     padding: '0 15px',
-    backgroundColor: 'rgba(255,255,255,0.5)',
+    backgroundColor: 'rgba(255,255,255,1)',
+    borderRadius: '5px',
   },
   emojis: {
-    height: '480px',
+    height: `${headerHeight}px`,
     position: 'absolute',
-    margin:  theme.spacing(1),
     overflow: 'hidden',
   }
 }));
 
 const Header = () => {
-  const classes = useStyles();
+  const headerHeight = 500;
+  const classes = useStyles(headerHeight)();
+  const emojiOuterSize = 60;
+  const emojiNum = Math.round((window.innerWidth * headerHeight) / (emojiOuterSize * emojiOuterSize));
 
   return (
     <Box className={classes.coloredHeader}>
       <Box className={classes.emojis}>
         <Grid container spacing={8}>
-          {Array(150).fill(0).map(() => {
+          {Array(emojiNum).fill(0).map(() => {
             const one = emojisFood[Math.floor(Math.random()*emojisFood.length)];
             const two = emojisFood[Math.floor(Math.random()*emojisFood.length)];
 
@@ -58,10 +66,16 @@ const Header = () => {
           })}
         </Grid>
       </Box>
-        <Box className={classes.title}>
-          <Typography variant="h1"> <span className={classes.titleText}>Menu des</span> </Typography>
-          <Typography variant="h1"> <span className={classes.titleText}>cantines</span> </Typography>
-          <Typography variant="h3"> Explorer l'open data avec la dataviz </Typography>
+        <Box className={classes.titleContainer}>
+          <Typography className={classes.title}variant="h1">
+            <span className={classes.titleText}>Menu des</span>
+          </Typography>
+          <Typography className={classes.title} variant="h1">
+            <span className={classes.titleText}>cantines</span>
+          </Typography>
+          <Typography className={classes.subtitle} variant="h3">
+            Explorer l'open data avec la dataviz
+          </Typography>
         </Box>
     </Box>
   );
