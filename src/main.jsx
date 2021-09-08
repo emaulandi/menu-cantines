@@ -1,6 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import '@fontsource/roboto';
+import '@fontsource/montserrat/700.css';
+
 import { createTheme, responsiveFontSizes, ThemeProvider } from '@material-ui/core/styles';
 import { CssBaseline } from '@material-ui/core';
 
@@ -22,6 +25,10 @@ const theme = responsiveFontSizes(
       },
       h3: {
         fontWeight: 700,
+      },
+      h4: {
+        fontWeight: 700,
+        fontFamily: 'montserrat',
       },
     },
   }),
