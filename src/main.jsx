@@ -14,6 +14,14 @@ const theme = responsiveFontSizes(
         contrastText: '#fff',
       },
     },
+    typography: {
+      h1: {
+        fontWeight: 900,
+      },
+      h3: {
+        fontWeight: 700,
+      },
+    },
   }),
 );
 

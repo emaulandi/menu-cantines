@@ -1,18 +1,38 @@
 import React from 'react';
 
-import { Container, Box, Typography } from '@material-ui/core';
+import { Container, Grid, Box, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
+import SmileyAnimation from './SmileysAnimation';
+
+import { emojisFood } from '../settings';
+
 const useStyles = makeStyles(theme => ({
-  coloredTitle: {
+  coloredHeader: {
     backgroundColor: theme.palette.primary.main,
     borderBottom: "4px solid lightgrey",
-    padding: theme.spacing(30, 0, 5, 0),
-    margin:  theme.spacing(0, 0, 5, 0),
-    textAlign: 'center',
+    height: '500px',
+    position: 'relative',
   },
-  scrollHint: {
-    margin:  theme.spacing(8, 0, 0, 0),
+  title: {
+    color: 'white',
+    margin: theme.spacing(0, 0, 5, 0),
+    textAlign: 'center',
+    position: 'absolute',
+    zIndex: 1,
+    bottom: '0',
+    left: '50%',
+    transform: 'translate(-50%, 0%)',
+  },
+  titleText: {
+    padding: '0 15px',
+    backgroundColor: 'rgba(255,255,255,0.5)',
+  },
+  emojis: {
+    height: '480px',
+    position: 'absolute',
+    margin:  theme.spacing(1),
+    overflow: 'hidden',
   }
 }));
 
@@ -20,13 +40,29 @@ const Header = () => {
   const classes = useStyles();
 
   return (
-    <Box className={classes.coloredTitle}>
-      <Container maxWidth="md">
-        <Box className={classes.title} >
-          <Typography variant="h1"> Hello </Typography>
-          <Typography variant="h2"> How are you </Typography>
+    <Box className={classes.coloredHeader}>
+      <Box className={classes.emojis}>
+        <Grid container spacing={8}>
+          {Array(150).fill(0).map(() => {
+            const one = emojisFood[Math.floor(Math.random()*emojisFood.length)];
+            const two = emojisFood[Math.floor(Math.random()*emojisFood.length)];
+
+            return (
+              <Grid item>
+                <SmileyAnimation
+                  firstElement={one}
+                  secondElement={two}
+                />
+              </Grid>
+            );
+          })}
+        </Grid>
+      </Box>
+        <Box className={classes.title}>
+          <Typography variant="h1"> <span className={classes.titleText}>Menu des</span> </Typography>
+          <Typography variant="h1"> <span className={classes.titleText}>cantines</span> </Typography>
+          <Typography variant="h3"> Explorer l'open data avec la dataviz </Typography>
         </Box>
-      </Container>
     </Box>
   );
 };
