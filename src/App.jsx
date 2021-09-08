@@ -17,41 +17,39 @@ function App() {
           dignissimos laborum fugiat deleniti? Eum quasi quidem quibusdam.
         </Typography>
 
-        {/*
         <iframe
           width="100%"
           height="126"
           frameborder="0"
-          src="https://observablehq.com/embed/aff01d184f7d36d5?cells=gridcolor"
+          src="https://observablehq.com/embed/@emaulandi/menu-cantine-saisons-excerpt?cells=gridcolor"
         />
-        */}
 
         <Typography variant="body1" gutterBottom>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos blanditiis tenetur
           unde suscipit, quam beatae rerum inventore consectetur, neque doloribus.
         </Typography>
-        {/*
+
         <iframe
           width="100%"
           height="596"
           frameborder="0"
-          src="https://observablehq.com/embed/aff01d184f7d36d5?cells=gridviewLegume"
+          src="https://observablehq.com/embed/@emaulandi/menu-cantine-saisons-excerpt?cells=gridviewLegume"
         />
-        */}
+
 
         <Typography variant="body1" gutterBottom>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos blanditiis tenetur
           unde suscipit, quam beatae rerum inventore consectetur, neque doloribus, cupiditate numquam
           dignissimos laborum fugiat deleniti? Eum quasi quidem quibusdam.
         </Typography>
-        {/*
+
         <iframe
           width="100%"
           height="616"
           frameborder="0"
-          src="https://observablehq.com/embed/aff01d184f7d36d5?cells=gridviewFruit"
+          src="https://observablehq.com/embed/@emaulandi/menu-cantine-saisons-excerpt?cells=gridviewFruit"
         />
-        */}
+
       </ContentLayout>
       
     </div>
