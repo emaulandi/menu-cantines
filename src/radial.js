@@ -17,23 +17,25 @@ const defaultChartSize = 300;
 const axisFontColor = grey[500];
 const monthFontColor = grey[600];
 
-const initRadial = (svgId, svgSide = defaultChartSize, dataWeeks, label) => {
+const initRadial = (svgId, svgSide = defaultChartSize, dataWeeks) => {
   // delete any previous element
   select(`#${svgId}`).selectChildren().remove();
 
   // texts sizes
   const defaultTicksSize = 10;
   const ticksSize = (svgSide * defaultTicksSize * 1.2) / defaultChartSize;
-  const defaultLabelSize = 18;
-  const labelSize = (svgSide * defaultLabelSize) / defaultChartSize;
 
   // build chart
   const baseline = 0;
-  const margin = 10;
+  const margin = 20;
+  const marginMonthText = 5;
   const yTicksNum = 3;
   const svgInnerRadius = svgSide / 6;
   const svgOuterRadius = svgSide / 2 - margin;
-  const localBound = max(dataWeeks.map(({ count }) => count));
+  const localBound = max([
+    max(dataWeeks.map(({ count }) => count)),
+    Math.abs(min(dataWeeks.map(({ count }) => count))),
+  ]);
 
   const xScale = scaleBand(
     dataWeeks.map(d => d.week),
@@ -84,8 +86,8 @@ const initRadial = (svgId, svgSide = defaultChartSize, dataWeeks, label) => {
         .attr('id', d => d.id)
         .attr('fill', 'none')
         .attr('d', d => `
-          M${pointRadial(xScale(d.week), svgOuterRadius)}
-          A${svgOuterRadius},${svgOuterRadius} 0,0,1 ${pointRadial(xScale(d.week + 4), svgOuterRadius)}
+          M${pointRadial(xScale(d.week), svgOuterRadius + marginMonthText)}
+          A${svgOuterRadius + marginMonthText},${svgOuterRadius + marginMonthText} 0,0,1 ${pointRadial(xScale(d.week + 4), svgOuterRadius + marginMonthText)}
         `))
       .call(g => g.append('text')
         .append('textPath')
@@ -149,15 +151,6 @@ const initRadial = (svgId, svgSide = defaultChartSize, dataWeeks, label) => {
 
   container.append('g')
     .call(xAxis);
-
-  container.append('text')
-    .attr('font-family', 'sans-serif')
-    .attr('font-size', labelSize)
-    .attr('font-weight', 'bold')
-    .attr('x', 0)
-    .attr('y', 0)
-    .style('text-anchor', 'middle')
-    .text(label);
 };
 
 export { initRadial as default };

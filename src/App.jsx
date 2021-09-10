@@ -31,9 +31,9 @@ function App () {
 
         <AlimentRadial
           svgId="test"
-          svgSide={400}
+          svgSide={370}
           aliment="chou"
-          label="coucou"
+          label="chou"
         />
 
         <Typography variant="h4" color="secondary">

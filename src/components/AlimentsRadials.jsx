@@ -38,7 +38,7 @@ const AlimentsRadials = ({ alimentCategory = 'legume' }) => {
 
   const svgSizeScale = scaleLinear()
     .domain([0, maxPerWeek])
-    .range([100, 200]);
+    .range([150, 280]);
 
   return (
     <Container maxWidth="lg" className={classes.wholeChartContainer}>
@@ -50,7 +50,7 @@ const AlimentsRadials = ({ alimentCategory = 'legume' }) => {
           return (
             <Grid item className={classes.gridItem}>
               <AlimentRadial
-                svgId={`chart-radial-${alimentName.split(' ')[0]}`}
+                svgId={`chart-radial-${alimentName.split(' ')[0]}-${alimentName.split(' ')[1]}`}
                 svgSide={svgSizeScale(maxCount)}
                 aliment={alimentName}
                 label={alimentName}
