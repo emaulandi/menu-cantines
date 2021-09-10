@@ -5,6 +5,7 @@ import { makeStyles } from '@material-ui/core/styles';
 
 import Header from './components/Header.jsx';
 import ContentLayout from './components/ContentLayout.jsx';
+import AlimentRadial from './components/AlimentRadial.jsx';
 
 const useStyles = makeStyles(theme => ({
   chartContainer: {
@@ -24,6 +25,13 @@ function App() {
           unde suscipit, quam beatae rerum inventore consectetur, neque doloribus, cupiditate numquam
           dignissimos laborum fugiat deleniti? Eum quasi quidem quibusdam.
         </Typography>
+
+        <AlimentRadial
+          svgId={"test"}
+          svgSide={300}
+          aliment={"chou"}
+          label={"coucou"}
+        />
 
         <iframe
           className={classes.chartContainer}
