@@ -11,9 +11,17 @@ import 'dayjs/locale/fr';
 dayjs.extend(weekOfYear);
 dayjs.locale('fr');
 
-const initRadial = (svgId, svgSide, dataWeeks, label) => {
+const defaultChartSize = 300;
+
+const initRadial = (svgId, svgSide = defaultChartSize, dataWeeks, label) => {
   // delete any previous element
   select(`#${svgId}`).selectChildren().remove();
+
+  // texts sizes
+  const defaultTicksSize = 10;
+  const ticksSize = (svgSide * defaultTicksSize * 1.2) / defaultChartSize;
+  const defaultLabelSize = 18;
+  const labelSize = (svgSide * defaultLabelSize) / defaultChartSize;
 
   // build chart
   const baseline = 0;
@@ -55,7 +63,7 @@ const initRadial = (svgId, svgSide, dataWeeks, label) => {
 
   const xAxis = g => g
     .attr('font-family', 'sans-serif')
-    .attr('font-size', 10)
+    .attr('font-size', ticksSize)
     .call(g => g.selectAll('g')
       .data(months)
       .join('g')
@@ -85,7 +93,7 @@ const initRadial = (svgId, svgSide, dataWeeks, label) => {
   const yAxis = g => g
     .attr('text-anchor', 'middle')
     .attr('font-family', 'sans-serif')
-    .attr('font-size', 10)
+    .attr('font-size', ticksSize)
     .call(g => g.selectAll('g')
       .data(yScale.ticks(yTicksNum).reverse())
       .join('g')
@@ -140,7 +148,7 @@ const initRadial = (svgId, svgSide, dataWeeks, label) => {
 
   container.append('text')
     .attr('font-family', 'sans-serif')
-    .attr('font-size', 18)
+    .attr('font-size', labelSize)
     .attr('font-weight', 'bold')
     .attr('x', 0)
     .attr('y', 0)
