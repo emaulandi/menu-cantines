@@ -4,7 +4,7 @@ import { Box } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
 import initRadial from '../radial';
-import weeksSaison from '../data/weeks_saison.json';
+import weeksSaisonByAliment from '../data/weeks_saison_by_food.json';
 
 const useStyles =  makeStyles({
   svgContainer: {
@@ -17,10 +17,7 @@ const AlimentRadial = ({ svgId, svgSide, aliment, label }) => {
   const classes = useStyles();
 
   useEffect(() => {
-    const dataWeeks = weeksSaison
-      .filter(({ match }) => match === aliment)
-      .sort((a, b) => a.week - b.week);
-
+    const dataWeeks = weeksSaisonByAliment.find(({ foodName }) => foodName === aliment).data;
     initRadial(svgId, svgSide, dataWeeks, label);
   });
 

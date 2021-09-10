@@ -6,6 +6,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Header from './components/Header';
 import ContentLayout from './components/ContentLayout';
 import AlimentRadial from './components/AlimentRadial';
+import AlimentsRadials from './components/AlimentsRadials';
 
 const useStyles = makeStyles(theme => ({
   chartContainer: {
@@ -19,6 +20,7 @@ function App () {
   return (
     <div className="App">
       <Header />
+
       <ContentLayout>
         <Typography variant="body1" gutterBottom>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos blanditiis tenetur
@@ -29,11 +31,27 @@ function App () {
 
         <AlimentRadial
           svgId="test"
-          svgSide={200}
+          svgSide={400}
           aliment="chou"
           label="coucou"
         />
 
+        <Typography variant="h4" color="secondary">
+          Les légumes
+        </Typography>
+      </ContentLayout>
+
+      <AlimentsRadials />
+
+      <ContentLayout>
+        <Typography variant="h4" color="secondary">
+          Les fruits
+        </Typography>
+      </ContentLayout>
+
+      <AlimentsRadials alimentCategory="fruit" />
+
+      <ContentLayout>
         <iframe
           title="color scale"
           className={classes.chartContainer}

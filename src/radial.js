@@ -8,10 +8,14 @@ import dayjs from 'dayjs';
 import weekOfYear from 'dayjs/plugin/weekOfYear';
 import 'dayjs/locale/fr';
 
+import grey from '@material-ui/core/colors/grey';
+
 dayjs.extend(weekOfYear);
 dayjs.locale('fr');
 
 const defaultChartSize = 300;
+const axisFontColor = grey[500];
+const monthFontColor = grey[600];
 
 const initRadial = (svgId, svgSide = defaultChartSize, dataWeeks, label) => {
   // delete any previous element
@@ -70,7 +74,7 @@ const initRadial = (svgId, svgSide = defaultChartSize, dataWeeks, label) => {
       // eslint-disable-next-line no-return-assign
       .each(d => d.id = `${svgId}-month-tick-${d.month}`)
       .call(g => g.append('path')
-        .attr('stroke', '#000')
+        .attr('stroke', axisFontColor)
         .attr('stroke-opacity', 0.2)
         .attr('d', d => `
           M${pointRadial(xScale(d.week), svgInnerRadius)}
@@ -87,8 +91,8 @@ const initRadial = (svgId, svgSide = defaultChartSize, dataWeeks, label) => {
         .append('textPath')
         .attr('startOffset', 6)
         .attr('xlink:href', d => `#${d.id}`)
-        .attr('class', 'bar')
-        .text(d => d.month)));
+        .text(d => d.month)
+        .attr('fill', monthFontColor)));
 
   const yAxis = g => g
     .attr('text-anchor', 'middle')
@@ -99,7 +103,7 @@ const initRadial = (svgId, svgSide = defaultChartSize, dataWeeks, label) => {
       .join('g')
       .attr('fill', 'none')
       .call(g => g.append('circle')
-        .attr('stroke', '#000')
+        .attr('stroke', axisFontColor)
         .attr('stroke-opacity', 0.2)
         .attr('r', yScale))
       .call(g => g.append('text')
