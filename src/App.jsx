@@ -37,7 +37,7 @@ function App() {
           className={classes.chartContainer}
           width="100%"
           height="126"
-          frameborder="0"
+          frameBorder="0"
           src="https://observablehq.com/embed/@emaulandi/menu-cantine-saisons-excerpt?cells=gridcolor"
         />
 
@@ -50,7 +50,7 @@ function App() {
           className={classes.chartContainer}
           width="100%"
           height="596"
-          frameborder="0"
+          frameBorder="0"
           src="https://observablehq.com/embed/@emaulandi/menu-cantine-saisons-excerpt?cells=gridviewLegume"
         />
 
@@ -64,7 +64,7 @@ function App() {
           className={classes.chartContainer}
           width="100%"
           height="616"
-          frameborder="0"
+          frameBorder="0"
           src="https://observablehq.com/embed/@emaulandi/menu-cantine-saisons-excerpt?cells=gridviewFruit"
         />
 
@@ -82,7 +82,7 @@ function App() {
           className={classes.chartContainer}
           width="100%"
           height="384"
-          frameborder="0"
+          frameBorder="0"
           src="https://observablehq.com/embed/@emaulandi/menu-cantine-saisons-excerpt?cells=radialExample"
         />
 

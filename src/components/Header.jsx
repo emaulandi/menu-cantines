@@ -51,12 +51,12 @@ const Header = () => {
     <Box className={classes.coloredHeader}>
       <Box className={classes.emojis}>
         <Grid container spacing={8}>
-          {Array(emojiNum).fill(0).map(() => {
+          {Array(emojiNum).fill(0).map((_,i) => {
             const one = emojisFood[Math.floor(Math.random()*emojisFood.length)];
             const two = emojisFood[Math.floor(Math.random()*emojisFood.length)];
 
             return (
-              <Grid item>
+              <Grid item key={`emoji-${i}`}>
                 <SmileyAnimation
                   firstElement={one}
                   secondElement={two}
