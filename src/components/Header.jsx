@@ -23,7 +23,7 @@ const useStyles = headerHeight => makeStyles(theme => ({
     left: '50%',
     transform: 'translate(-50%, 0%)',
   },
-  title : {
+  title: {
     color: theme.palette.primary.main,
   },
   subtitle: {
@@ -38,24 +38,27 @@ const useStyles = headerHeight => makeStyles(theme => ({
     height: `${headerHeight}px`,
     position: 'absolute',
     overflow: 'hidden',
-  }
+  },
 }));
 
 const Header = () => {
   const headerHeight = 500;
   const classes = useStyles(headerHeight)();
   const emojiOuterSize = 60;
-  const emojiNum = Math.round((window.innerWidth * headerHeight) / (emojiOuterSize * emojiOuterSize));
+  const emojiNum = Math.round(
+    (window.innerWidth * headerHeight) / (emojiOuterSize * emojiOuterSize),
+  );
 
   return (
     <Box className={classes.coloredHeader}>
       <Box className={classes.emojis}>
         <Grid container spacing={8}>
-          {Array(emojiNum).fill(0).map((_,i) => {
-            const one = emojisFood[Math.floor(Math.random()*emojisFood.length)];
-            const two = emojisFood[Math.floor(Math.random()*emojisFood.length)];
+          {Array(emojiNum).fill(0).map((_, i) => {
+            const one = emojisFood[Math.floor(Math.random() * emojisFood.length)];
+            const two = emojisFood[Math.floor(Math.random() * emojisFood.length)];
 
             return (
+              // eslint-disable-next-line react/no-array-index-key
               <Grid item key={`emoji-${i}`}>
                 <SmileyAnimation
                   firstElement={one}
@@ -66,17 +69,17 @@ const Header = () => {
           })}
         </Grid>
       </Box>
-        <Box className={classes.titleContainer}>
-          <Typography className={classes.title}variant="h1">
-            <span className={classes.titleText}>Menu des</span>
-          </Typography>
-          <Typography className={classes.title} variant="h1">
-            <span className={classes.titleText}>cantines</span>
-          </Typography>
-          <Typography className={classes.subtitle} variant="h3">
-            Explorer l'open data avec la dataviz
-          </Typography>
-        </Box>
+      <Box className={classes.titleContainer}>
+        <Typography className={classes.title} variant="h1">
+          <span className={classes.titleText}>Menu des</span>
+        </Typography>
+        <Typography className={classes.title} variant="h1">
+          <span className={classes.titleText}>cantines</span>
+        </Typography>
+        <Typography className={classes.subtitle} variant="h3">
+          Explorer l'open data avec la dataviz
+        </Typography>
+      </Box>
     </Box>
   );
 };

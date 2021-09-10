@@ -37,9 +37,9 @@ const theme = responsiveFontSizes(
 ReactDOM.render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
-        <CssBaseline />
-        <App />
+      <CssBaseline />
+      <App />
     </ThemeProvider>
   </React.StrictMode>,
-  document.getElementById('root')
-)
+  document.getElementById('root'),
+);

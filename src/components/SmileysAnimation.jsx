@@ -3,12 +3,11 @@ import React, { useState } from 'react';
 import { useTransition, animated } from '@react-spring/web';
 
 const SmileyAnimation = ({ firstElement, secondElement }) => {
-
   const defaultStyle = {
     fontSize: '50px',
     position: 'absolute',
     margin: '5px',
-  }
+  };
   const maxOpacity = 0.8;
   const [toggle, set] = useState(false);
   const transitions = useTransition(toggle, {
@@ -20,26 +19,28 @@ const SmileyAnimation = ({ firstElement, secondElement }) => {
     delay: 200,
   });
 
-  return transitions(({ opacity }, item) =>
+  return transitions(({ opacity }, item) => (
     item ? (
       <animated.p
         style={{
           opacity: opacity.to({ range: [0.0, 1.0], output: [0, maxOpacity] }),
-          ...defaultStyle
-        }}>
+          ...defaultStyle,
+        }}
+      >
         { firstElement }
       </animated.p>
     ) : (
       <animated.p
         onMouseOver={() => set(!toggle)}
-          style={{
+        style={{
           opacity: opacity.to({ range: [1.0, 0.0], output: [maxOpacity, 0] }),
-          ...defaultStyle
-        }}>
+          ...defaultStyle,
+        }}
+      >
         { secondElement }
       </animated.p>
     )
-  )
+  ));
 };
 
 export default SmileyAnimation;

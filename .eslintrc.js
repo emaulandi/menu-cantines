@@ -14,7 +14,7 @@ module.exports = {
   },
   rules: {
     'arrow-parens':                      [error, 'as-needed'],
-    'camelcase':                         [warn],
+    camelcase:                         [warn],
     'no-param-reassign':                 [warn],
     'object-curly-newline':              [warn, { consistent: true }],
     'implicit-arrow-linebreak':          [off],

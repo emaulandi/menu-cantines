@@ -3,9 +3,9 @@ import React from 'react';
 import { Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
-import Header from './components/Header.jsx';
-import ContentLayout from './components/ContentLayout.jsx';
-import AlimentRadial from './components/AlimentRadial.jsx';
+import Header from './components/Header';
+import ContentLayout from './components/ContentLayout';
+import AlimentRadial from './components/AlimentRadial';
 
 const useStyles = makeStyles(theme => ({
   chartContainer: {
@@ -13,7 +13,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-function App() {
+function App () {
   const classes = useStyles();
 
   return (
@@ -22,18 +22,20 @@ function App() {
       <ContentLayout>
         <Typography variant="body1" gutterBottom>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos blanditiis tenetur
-          unde suscipit, quam beatae rerum inventore consectetur, neque doloribus, cupiditate numquam
+          unde suscipit, quam beatae rerum inventore
+          consectetur, neque doloribus, cupiditate numquam
           dignissimos laborum fugiat deleniti? Eum quasi quidem quibusdam.
         </Typography>
 
         <AlimentRadial
-          svgId={"test"}
+          svgId="test"
           svgSide={300}
-          aliment={"chou"}
-          label={"coucou"}
+          aliment="chou"
+          label="coucou"
         />
 
         <iframe
+          title="color scale"
           className={classes.chartContainer}
           width="100%"
           height="126"
@@ -47,6 +49,7 @@ function App() {
         </Typography>
 
         <iframe
+          title="legume"
           className={classes.chartContainer}
           width="100%"
           height="596"
@@ -56,11 +59,13 @@ function App() {
 
         <Typography variant="body1" gutterBottom>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos blanditiis tenetur
-          unde suscipit, quam beatae rerum inventore consectetur, neque doloribus, cupiditate numquam
+          unde suscipit, quam beatae rerum inventor
+          consectetur, neque doloribus, cupiditate numquam
           dignissimos laborum fugiat deleniti? Eum quasi quidem quibusdam.
         </Typography>
 
         <iframe
+          title="fruit"
           className={classes.chartContainer}
           width="100%"
           height="616"
@@ -74,22 +79,15 @@ function App() {
 
         <Typography variant="body1" gutterBottom>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos blanditiis tenetur
-          unde suscipit, quam beatae rerum inventore consectetur, neque doloribus, cupiditate numquam
+          unde suscipit, quam beatae rerum inventore consectetur,
+          neque doloribus, cupiditate numquam
           dignissimos laborum fugiat deleniti? Eum quasi quidem quibusdam.
         </Typography>
 
-        <iframe
-          className={classes.chartContainer}
-          width="100%"
-          height="384"
-          frameBorder="0"
-          src="https://observablehq.com/embed/@emaulandi/menu-cantine-saisons-excerpt?cells=radialExample"
-        />
-
       </ContentLayout>
-      
+
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
