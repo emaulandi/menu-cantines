@@ -4,13 +4,14 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles(theme => ({
   coloredFooter: {
-    color: 'lightgrey',
+    color: 'white',
     backgroundColor: theme.palette.secondary.main,
     padding: theme.spacing(10, 0),
     margin:  theme.spacing(15, 0, 0, 0),
   },
   title: {
     margin: theme.spacing(0, 0, 2, 0),
+    color: theme.palette.primary.main,
   },
   niceLink: {
     color: 'white',
@@ -49,7 +50,7 @@ const Footer = () => {
               Méthodologie
             </Typography>
             <Typography variant="body1" gutterBottom>
-              Vous pourrez retrouver le code de ce site sur <Link className={classes.niceLink} href="#">github</Link> , ainsi que 
+              Vous pourrez retrouver le code de ce site sur <Link className={classes.niceLink} href="#">github</Link> , ainsi que
               le notebook python pour le traitement des données.
               Le notebook d'exploration des saisonalités est également disponible.
             </Typography>

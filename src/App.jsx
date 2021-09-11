@@ -126,8 +126,8 @@ function App () {
           nous avons traité le fichier pour apporter plus d'informations catégoriques à partir du champ <span className={classes.strong}>plat</span> disponible :
           <ul>
             <li>Création d'une liste d'aliment parmi : viande rouge / viande blanche / poisson et fruit de mer / legume / fruit / laitage</li>
-            <li>Etiquettage de chaque plat avec ces catégories <i>Avec un objectif de couvrir plus de 95% des plats</i></li>
-            <li>Création d'un liste de plat pour pointer aussi les produits préparés et industriels</li>
+            <li>Etiquettage de chaque plat avec ces catégories avec un <span className={classes.strong}>objectif de couvrir au moins 95% des plats</span></li>
+            <li>Création d'un liste de plat pour pointer aussi les produits préparés et industriels et définir leur composition en catégorie d'aliment</li>
             <li>Création d'un liste de texte à exclure <i>(le champ plat étant aussi utilisé pour indiquer des évènements particuliers comme le repas de nöel)</i></li>
             <li>Etiquettage des produits bio <i>(mention disponible dans champ plat)</i></li>
             <li>Agrégation des lignes du même jour pour obtenir la pondération par jour des catégories d'aliments <i>(pour un jour donnée, nous pouvons voir le pourcentage de féculent, de bio ...)</i></li>
@@ -141,12 +141,44 @@ function App () {
           de présence des aliments plat par plat, puis on aggrège par jour."
         />
 
+        <Typography variant="body1" gutterBottom>
+          Nous avons rencontrés plusieurs <span className={classes.strong}>difficultés</span> dans ce processus pour gérer :
+          <ul>
+            <li>la variété d’orthographe : boeuf / bœuf</li>
+            <li>les fautes : omellette</li>
+            <li>les accents : Pâtes vs pâté</li>
+            <li>les plats hors catégories <i>(préparé et industriel)</i> : hachis parmentier, ratatouille… </li>
+          </ul>
+        </Typography>
+
+        <Typography variant="body1" gutterBottom>
+          Des <span className={classes.strong}>limites importantes</span> sont aussi à noter :
+          <ul>
+            <li>Pour le bio, nous avons utilisé la mention dans le texte libre du champ, c'est déclaratif. Il est aussi possible que cette mention ne soit pas présente et qu'un aliment soit bio, où qu'elle soit utilisée différement au cours du temps.</li>
+            <li>Pour les plats préparé et industriel <i>(hachis parmentier, ratatouille…)</i> comme différencier à partir du texte si c'est un plat préparé sur place ou industriel ? <i>(exemple : "Poêlée ratatouille Bonduelle", "ratatouille", "ratatouille maison")</i></li>
+          </ul>
+        </Typography>
+
         <Typography variant="h4" className={classes.title} color="primary">
           Exploration visuelle
         </Typography>
 
-        <Typography variant="h4" className={classes.title} color="primary">
+        <Typography variant="body1" gutterBottom>
+          Dans cette phase exploratoire, l'idéal est d'utiliser des outils que l'on maitrise déjà et qui permettre de produire
+          différent type de graphiques rapidement pour mieux comprendre les données et décidier si une piste d'analyse est intéressante à creuser davantage.
+        </Typography>
+
+        <Typography variant="h5" className={classes.title} color="secondary">
           Les outils
+        </Typography>
+
+        <Typography variant="body1" gutterBottom>
+          <ul>
+            <li><b>Data Studio</b> (pour Florian) : + / - </li>
+            <li><b>Notebook Observable et la librairie Plot</b> (pour Edith) : + - </li>
+            <li><b>D3.js</b> (pour Florian) : + - </li>
+          </ul>
+          Mais d'autres sont aussi très intéressants : en restant côté Python <i>(seaborn, plotly)</i>, nocode avec Tableau / Excel, R avec shiny ...
         </Typography>
 
         <Typography variant="h4" className={classes.title} color="primary">
@@ -154,8 +186,8 @@ function App () {
         </Typography>
 
         <Typography variant="body1" gutterBottom>
-          Qu'est-ce que l'on peut apprendre sur le menu des cantines grâce à l'open data
-          et à la dataviz ? C'est la question que l'on s'est posé (Florian Melki et Edith Maulandi).
+          Après cette pahse d'exploration visuelle, nous avons choisit de retenir 3 axes particuliers sur lesquels se concentrer
+          et produire des visualisations plus abouties.
         </Typography>
 
         <Typography variant="h5" className={classes.title} color="secondary">
@@ -165,6 +197,42 @@ function App () {
         <Typography variant="body1" gutterBottom>
           Qu'est-ce que l'on peut apprendre sur le menu des cantines grâce à l'open data
           et à la dataviz ? C'est la question que l'on s'est posé (Florian Melki et Edith Maulandi).
+        </Typography>
+
+        TBD Ajouter image recap datastudio
+
+        <iframe
+          title="meat color scale"
+          className={classes.chartContainer}
+          width="100%"
+          height="120"
+          frameBorder="0"
+          src="https://observablehq.com/embed/857101b245272036?cells=typemeal"
+        />
+
+        <iframe
+          title="meat grid"
+          className={classes.chartContainer}
+          width="100%"
+          height="650"
+          frameBorder="0"
+          src="https://observablehq.com/embed/857101b245272036?cells=meatgrid"
+        />
+
+        <Typography variant="body1" gutterBottom>
+          Les <span className={classes.strong}>limites</span> :
+          <ul>
+            <li>Il est important de vérifier d'éventuels trous dans les données. On voit facilement avec la vue calendrier qu'il manque des données sur plusieurs mois en 2013, mais cela peut être moins évident dans des vue plus générale.</li>
+            <li>On peut noter dans la vue calendrier qu'il y a des jours sans données, et des jours avec viande rouge et blanche : il faudrait vérifier plus attentivement le processus de catégorisation</li>
+          </ul>
+        </Typography>
+
+        <Typography variant="body1" gutterBottom>
+          À noter côté <span className={classes.strong}>dataviz</span> :
+          <ul>
+            <li>Vue général et statistique vs vue détaillée plus relatable</li>
+            <li>deux</li>
+          </ul>
         </Typography>
 
         <Typography variant="h5" className={classes.title} color="secondary">
@@ -177,7 +245,7 @@ function App () {
         </Typography>
 
         <iframe
-          title="color scale"
+          title="saison color scale"
           className={classes.chartContainer}
           width="100%"
           height="126"
@@ -252,8 +320,29 @@ function App () {
 
       <ContentLayout>
         <Typography variant="body1" gutterBottom>
-          Qu'est-ce que l'on peut apprendre sur le menu des cantines grâce à l'open data
-          et à la dataviz ? C'est la question que l'on s'est posé (Florian Melki et Edith Maulandi).
+          Les <span className={classes.strong}>limites</span> :
+          <ul>
+            <li>Cette analyse se base sur SOURCE qui n'inclut pas banane / ananas car hors France ➡️ différentes notions de "saison" peuvent être choisies</li>
+            <li>On trouve un fruit / legume correspondant pour 67% des plats identifiés comme tel en utilisant le texte libre. Les plats préparés et industriel ne sont pas détaillé par aliment spécifique et donc non pris en compte <i>(ex: on ne compte donc pas la pomme de terre dans le hachis parmentier)</i></li>
+            <li>On utilise le fruit / legume que l'on trouve dans le texte sans distinction, et on passe outre des nuances importantes. Par exemple la compote de pomme a surement été frabriquée à la récolte des fruits et donc de saison. Hors ici elle va être catégorisée "hors saison".</li>
+          </ul>
+        </Typography>
+
+        <Typography variant="body1" gutterBottom>
+          À noter côté <span className={classes.strong}>dataviz</span> :
+          <ul>
+            <li>Vue général et statistique vs vue détaillée plus relatable</li>
+            <li>deux</li>
+          </ul>
+        </Typography>
+
+        <Typography variant="body1" gutterBottom>
+          À noter côté <span className={classes.strong}>data</span> :
+          <ul>
+            <li>Il est souvent intéressant d'<b>enrichir</b> un jeu de données avec jeu de données complémentaire. Posez-vous la question dès le début du projet : "qullees autres informations pourraient être intéressantes avec celles dont je dispose déjà ?"</li>
+            <li>Pas de jeux de données disponibles ? Dans certains cas, on peut en <b>construire soi-même</b> ! Ici nous avons utilisé un site listant les produits de saisons et l'avons mis en forme de tableau pour pouvoir l'exploiter facilement.</li>
+          </ul>
+
         </Typography>
 
         <Typography variant="h5" className={classes.title} color="secondary">
