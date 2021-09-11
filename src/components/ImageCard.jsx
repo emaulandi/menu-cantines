@@ -19,7 +19,7 @@ const ImageCard = ({ imgSrc, title, description }) => {
       <CardMedia
         component="img"
         alt={title}
-        image={`../../static/${imgSrc}`}
+        image={imgSrc}
         title={title}
       />
       <CardContent>
