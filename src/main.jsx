@@ -42,6 +42,13 @@ const theme = responsiveFontSizes(
         fontFamily: 'montserrat',
       },
     },
+    overrides: {
+      MuiTypography: {
+        gutterBottom: {
+          marginBottom: 16,
+        },
+      },
+    },
   }),
 );
 
