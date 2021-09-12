@@ -17,7 +17,7 @@ const defaultChartSize = 300;
 const axisFontColor = grey[500];
 const monthFontColor = grey[600];
 
-const initRadial = (svgId, svgSide = defaultChartSize, dataWeeks) => {
+const initRadial = (svgId, svgSide = defaultChartSize, dataWeeks, shortMonths = false) => {
   // delete any previous element
   select(`#${svgId}`).selectChildren().remove();
 
@@ -93,7 +93,7 @@ const initRadial = (svgId, svgSide = defaultChartSize, dataWeeks) => {
         .append('textPath')
         .attr('startOffset', 6)
         .attr('xlink:href', d => `#${d.id}`)
-        .text(d => d.month)
+        .text(d => (shortMonths ? d.month.slice(0, 3) : d.month))
         .attr('fill', monthFontColor)));
 
   const yAxis = g => g

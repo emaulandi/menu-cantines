@@ -54,6 +54,7 @@ const AlimentsRadials = ({ alimentCategory = 'legume' }) => {
                 svgSide={svgSizeScale(maxCount)}
                 aliment={alimentName}
                 label={alimentName}
+                shortMonths
               />
             </Grid>
           );

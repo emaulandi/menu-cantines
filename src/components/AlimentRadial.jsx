@@ -24,12 +24,12 @@ const useStyles =  makeStyles({
   },
 });
 
-const AlimentRadial = ({ svgId, svgSide, aliment, label }) => {
+const AlimentRadial = ({ svgId, svgSide, aliment, label, shortMonths = false }) => {
   const classes = useStyles();
 
   useEffect(() => {
     const dataWeeks = weeksSaisonByAliment.find(({ foodName }) => foodName === aliment).data;
-    initRadial(svgId, svgSide, dataWeeks);
+    initRadial(svgId, svgSide, dataWeeks, shortMonths);
   });
 
   return (
