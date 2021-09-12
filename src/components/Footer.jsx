@@ -54,6 +54,10 @@ const Footer = () => {
               le notebook python pour le traitement des données.
               Le notebook d'exploration des saisonalités est également disponible.
             </Typography>
+            <Typography variant="body1" gutterBottom>
+              La favicon pomme est designée par <Link className={classes.niceLink} href="https://openmoji.org/">OpenMoji</Link>
+              – le projet open-source d'emoji et d'icones. License: <Link className={classes.niceLink} href="https://openmoji.org/">CC BY-SA 4.0</Link>.
+            </Typography>
           </Grid>
         </Grid>
 
