@@ -140,7 +140,7 @@ function App () {
 
         <ImageCard
           imgSrc="process.png"
-          title="Hello"
+          title="Processus"
           description="Processus de traitement : à partir de l'étiquettage par catégorie, on ajoute une pondération
           de présence des aliments plat par plat, puis on aggrège par jour."
         />
@@ -233,11 +233,8 @@ function App () {
         </Typography>
 
         <Typography variant="body1" gutterBottom>
-          Qu'est-ce que l'on peut apprendre sur le menu des cantines grâce à l'open data
-          et à la dataviz ? C'est la question que l'on s'est posé (Florian Melki et Edith Maulandi).
+          Texte
         </Typography>
-
-        TBD Ajouter image recap datastudio
 
         <iframe
           title="meat color scale"
@@ -278,8 +275,7 @@ function App () {
         </Typography>
 
         <Typography variant="body1" gutterBottom>
-          Qu'est-ce que l'on peut apprendre sur le menu des cantines grâce à l'open data
-          et à la dataviz ? C'est la question que l'on s'est posé (Florian Melki et Edith Maulandi).
+          Texte
         </Typography>
 
         <iframe
@@ -292,8 +288,7 @@ function App () {
         />
 
         <Typography variant="body1" gutterBottom>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos blanditiis tenetur
-          unde suscipit, quam beatae rerum inventore consectetur, neque doloribus.
+          Texte
         </Typography>
 
         <iframe
@@ -306,10 +301,7 @@ function App () {
         />
 
         <Typography variant="body1" gutterBottom>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos blanditiis tenetur
-          unde suscipit, quam beatae rerum inventor
-          consectetur, neque doloribus, cupiditate numquam
-          dignissimos laborum fugiat deleniti? Eum quasi quidem quibusdam.
+          Texte
         </Typography>
 
         <iframe
@@ -333,10 +325,7 @@ function App () {
         />
 
         <Typography variant="body1" gutterBottom>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos blanditiis tenetur
-          unde suscipit, quam beatae rerum inventore consectetur,
-          neque doloribus, cupiditate numquam
-          dignissimos laborum fugiat deleniti? Eum quasi quidem quibusdam.
+          Texte
         </Typography>
 
         <hr className={classes.separator} />
@@ -370,17 +359,16 @@ function App () {
           À noter côté <span className={classes.strong}>dataviz</span> :
           <ul>
             <li>Vue général et statistique vs vue détaillée plus relatable</li>
-            <li>deux</li>
+            <li>Simple ou fancy, les but de la dataviz Lisa Charlotte Muth</li>
           </ul>
         </Typography>
 
         <Typography variant="body1" gutterBottom>
           À noter côté <span className={classes.strong}>data</span> :
           <ul>
-            <li>Il est souvent intéressant d'<b>enrichir</b> un jeu de données avec jeu de données complémentaire. Posez-vous la question dès le début du projet : "qullees autres informations pourraient être intéressantes avec celles dont je dispose déjà ?"</li>
+            <li>Il est souvent intéressant d'<b>enrichir</b> un jeu de données avec jeu de données complémentaire. Posez-vous la question dès le début du projet : <i>"Quelles autres informations pourraient être intéressantes avec celles dont je dispose déjà ?"</i></li>
             <li>Pas de jeux de données disponibles ? Dans certains cas, on peut en <b>construire soi-même</b> ! Ici nous avons utilisé un site listant les produits de saisons et l'avons mis en forme de tableau pour pouvoir l'exploiter facilement.</li>
           </ul>
-
         </Typography>
 
         <Typography variant="h5" className={classes.title} color="secondary">
@@ -407,6 +395,21 @@ function App () {
 
         <Typography variant="body1" gutterBottom>
           Texte
+        </Typography>
+
+        <Typography variant="body1" gutterBottom>
+          Les <span className={classes.strong}>limites</span> :
+          <ul>
+            <li>Bio declaratif</li>
+            <li>Qu'est-ce qu'on produit industriel ?</li>
+          </ul>
+        </Typography>
+
+        <Typography variant="body1" gutterBottom>
+          À noter côté <span className={classes.strong}>data</span> :
+          <ul>
+            <li>Général vs particulier : 1 éléménet parmis tous ex: ketchup</li>
+          </ul>
         </Typography>
 
         <Typography variant="h4" className={classes.title} color="primary">

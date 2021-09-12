@@ -39,9 +39,7 @@ const Footer = () => {
               Réalisé par
             </Typography>
             <Typography variant="body1" gutterBottom>
-              Qu'est-ce que l'on peut apprendre sur le menu des cantines grâce à l'open data
-              et à la dataviz ? C'est la question que l'on s'est posé
-              (Florian Melki et Edith Maulandi).
+              Texte
             </Typography>
           </Grid>
 
