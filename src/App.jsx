@@ -9,7 +9,11 @@ import ContentLayout from './components/ContentLayout';
 import AlimentRadial from './components/AlimentRadial';
 import AlimentsRadials from './components/AlimentsRadials';
 import ImageCard from './components/ImageCard';
+import BioPercentChart from './components/BioPercentChart';
 import Footer from './components/Footer';
+
+export const smallScreenMediaQuery = '(max-width: 1000px)';
+export const isSmallScreen = window.matchMedia(smallScreenMediaQuery).matches;
 
 const useStyles = makeStyles(theme => ({
   title: {
@@ -353,7 +357,11 @@ function App () {
           Qu'est-ce que l'on peut apprendre sur le menu des cantines grâce à l'open data
           et à la dataviz ? C'est la question que l'on s'est posé (Florian Melki et Edith Maulandi).
         </Typography>
+      </ContentLayout>
 
+      <BioPercentChart config={isSmallScreen ? 'smallScreen' : 'default'} />
+
+      <ContentLayout>
         <Typography variant="h4" className={classes.title} color="primary">
           Pour la suite
         </Typography>
