@@ -1,10 +1,11 @@
+/* eslint-disable max-len */
 import React from 'react';
 import { Container, Grid, Box, Typography, Link } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles(theme => ({
   coloredFooter: {
-    color: 'white',
+    color: 'lightgrey',
     backgroundColor: theme.palette.secondary.main,
     padding: theme.spacing(10, 0),
     margin:  theme.spacing(15, 0, 0, 0),
@@ -12,6 +13,11 @@ const useStyles = makeStyles(theme => ({
   title: {
     margin: theme.spacing(0, 0, 2, 0),
     color: theme.palette.primary.main,
+  },
+  spacedList: {
+    '& li': {
+      marginBottom:  theme.spacing(1),
+    },
   },
   niceLink: {
     color: 'white',
@@ -39,7 +45,14 @@ const Footer = () => {
               Réalisé par
             </Typography>
             <Typography variant="body1" gutterBottom>
-              Texte
+              <ul className={classes.spacedList}>
+                <li><Link className={classes.niceLink} href="https://emaulandi.github.io/">Edith Maulandi</Link> est ingénieure et formatrice dataviz chez Makina Corpus. Elle dispense un cours d'introduction à la visualisation de données
+                  pour EPF Montpellier <i>(école d'ingénieur.e.s)</i> et contribue au <Link className={classes.niceLink} href="https://www.meetup.com/fr-FR/Meetup-Visualisation-des-donnees-Toulouse/">meetup Toulouse Dataviz</Link>.
+                </li>
+                <li><Link className={classes.niceLink} href="https://t.co/blSK8ZFfI0?amp=1">Florian Melki</Link> est ingénieur et data-analyst chez Dernier cri. Il co-organise le
+                  <Link className={classes.niceLink} href="https://www.meetup.com/fr-FR/DataViz-Nantes/">meetup dataviz Nantes</Link>.
+                </li>
+              </ul>
             </Typography>
           </Grid>
 
@@ -50,7 +63,7 @@ const Footer = () => {
             <Typography variant="body1" gutterBottom>
               Vous pourrez retrouver le code de ce site sur <Link className={classes.niceLink} href="https://github.com/emaulandi/menu-cantines">github</Link>
               , ainsi que :
-              <ul>
+              <ul className={classes.spacedList}>
                 <li>
                   le <Link className={classes.niceLink} href="https://github.com/emaulandi/menu-cantines/tree/master/data-processing">notebook python</Link> pour le traitement des données et les fichiers en entrée / sortie
                 </li>
