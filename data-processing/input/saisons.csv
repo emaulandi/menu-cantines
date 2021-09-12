@@ -1,0 +1,534 @@
+aliment,type,mois,int_mois
+pomme de terre,legume,septembre,9
+pomme de terre,legume,octobre,10
+pomme de terre,legume,novembre,11
+pomme de terre,legume,decembre,12
+pomme de terre,legume,janvier,1
+pomme de terre,legume,février,2
+pomme de terre,legume,mars,3
+potimarron,legume,septembre,9
+potimarron,legume,octobre,10
+potimarron,legume,novembre,11
+potimarron,legume,decembre,12
+Salade verte,legume,janvier,1
+Ail,legume,janvier,1
+Betterave,legume,janvier,1
+Carotte,legume,janvier,1
+Céleri-branche,legume,janvier,1
+Céleri,legume,janvier,1
+Chou,legume,janvier,1
+Chou blanc,legume,janvier,1
+Chou de Bruxelles,legume,janvier,1
+Chou frisé,legume,janvier,1
+Chou rouge,legume,janvier,1
+Courge,legume,janvier,1
+Crosne,legume,janvier,1
+Endive,legume,janvier,1
+Epinards,legume,janvier,1
+Frisée,legume,janvier,1
+Mâche,legume,janvier,1
+Navet,legume,janvier,1
+Oignon,legume,janvier,1
+Panais,legume,janvier,1
+Poireau,legume,janvier,1
+Pomme de terre de conservation,legume,janvier,1
+Salsifi,legume,janvier,1
+Topinambour,legume,janvier,1
+Amande sèche,fruit,janvier,1
+Citron,fruit,janvier,1
+Clémentine,fruit,janvier,1
+Kaki,fruit,janvier,1
+Kiwi,fruit,janvier,1
+Mandarine,fruit,janvier,1
+Orange,fruit,janvier,1
+Pamplemousse,fruit,janvier,1
+Physalis,fruit,janvier,1
+Poire,fruit,janvier,1
+Pomme,fruit,janvier,1
+Salade verte,legume,février,2
+Ail,legume,février,2
+Betterave,legume,février,2
+Carotte,legume,février,2
+Céleri,legume,février,2
+Chou blanc,legume,février,2
+Chou de Bruxelles,legume,février,2
+Chou frisé,legume,février,2
+Chou rouge,legume,février,2
+Crosne,legume,février,2
+Endive,legume,février,2
+Epinards,legume,février,2
+Frisée,legume,février,2
+Mâche,legume,février,2
+Navet,legume,février,2
+Oignon,legume,février,2
+Panais,legume,février,2
+Poireau,legume,février,2
+Pomme de terre de conservation,legume,février,2
+Radis,legume,février,2
+Salsifi,legume,février,2
+Topinambour,legume,février,2
+Amande sèche,fruit,février,2
+Citron,fruit,février,2
+Clémentine,fruit,février,2
+Kiwi,fruit,février,2
+Mandarine,fruit,février,2
+Orange,fruit,février,2
+Pamplemousse,fruit,février,2
+Physalis,fruit,février,2
+Poire,fruit,février,2
+Pomme,fruit,février,2
+Salade verte,legume,mars,3
+Ail,legume,mars,3
+Asperge,legume,mars,3
+Betterave,legume,mars,3
+Blette,legume,mars,3
+Carotte,legume,mars,3
+Céleri,legume,mars,3
+Chou,legume,mars,3
+Chou de Bruxelles,legume,mars,3
+Chou-fleur,legume,mars,3
+Crosne,legume,mars,3
+Endive,legume,mars,3
+Epinards,legume,mars,3
+Frisée,legume,mars,3
+Navet,legume,mars,3
+Oignon,legume,mars,3
+Panais,legume,mars,3
+Poireau,legume,mars,3
+Pomme de terre de conservation,legume,mars,3
+Radis,legume,mars,3
+Salsifi,legume,mars,3
+Topinambour,legume,mars,3
+Amande sèche,fruit,mars,3
+Citron,fruit,mars,3
+Kiwi,fruit,mars,3
+Orange,fruit,mars,3
+Pamplemousse,fruit,mars,3
+Poire,fruit,mars,3
+Pomme,fruit,mars,3
+Salade verte,legume,avril,4
+Ail,legume,avril,4
+Artichaut,legume,avril,4
+Asperge,legume,avril,4
+Betterave,legume,avril,4
+Blette,legume,avril,4
+Carotte,legume,avril,4
+Chou-fleur,legume,avril,4
+Concombre,legume,avril,4
+Endive,legume,avril,4
+Epinards,legume,avril,4
+Frisée,legume,avril,4
+Laitue,legume,avril,4
+Navet,legume,avril,4
+Oignon,legume,avril,4
+Petit pois,legume,avril,4
+Poireau,legume,avril,4
+Pomme de terre primeur,legume,avril,4
+Radis,legume,avril,4
+Amande sèche,fruit,avril,4
+Citron,fruit,avril,4
+Pamplemousse,fruit,avril,4
+Poire,fruit,avril,4
+Pomme,fruit,avril,4
+Salade verte,legume,mai,5
+Ail,legume,mai,5
+Artichaut,legume,mai,5
+Asperge,legume,mai,5
+Aubergine,legume,mai,5
+Betterave,legume,mai,5
+Blette,legume,mai,5
+Carotte,legume,mai,5
+Chou-fleur,legume,mai,5
+Concombre,legume,mai,5
+Courgette,legume,mai,5
+Epinards,legume,mai,5
+Laitue,legume,mai,5
+Navet,legume,mai,5
+Oignon,legume,mai,5
+Petit pois,legume,mai,5
+Pomme de terre primeur,legume,mai,5
+Radis,legume,mai,5
+Amande sèche,fruit,mai,5
+Cerise,fruit,mai,5
+Fraise,fruit,mai,5
+Pamplemousse,fruit,mai,5
+Rhubarbe,fruit,mai,5
+Tomate,fruit,mai,5
+Salade verte,legume,juin,6
+Ail,legume,juin,6
+Artichaut,legume,juin,6
+Asperge,legume,juin,6
+Aubergine,legume,juin,6
+Betterave,legume,juin,6
+Blette,legume,juin,6
+Brocoli,legume,juin,6
+Carotte,legume,juin,6
+Chou romanesco,legume,juin,6
+Concombre,legume,juin,6
+Courgette,legume,juin,6
+Epinards,legume,juin,6
+Fenouil,legume,juin,6
+Haricot vert,legume,juin,6
+Laitue,legume,juin,6
+Navet,legume,juin,6
+Oignon,legume,juin,6
+Petit pois,legume,juin,6
+Poivron,legume,juin,6
+Pomme de terre primeur,legume,juin,6
+Abricot,fruit,juin,6
+Amande sèche,fruit,juin,6
+Brugnon,fruit,juin,6
+Cassis,fruit,juin,6
+Cerise,fruit,juin,6
+Citron,fruit,juin,6
+Fraise,fruit,juin,6
+Framboise,fruit,juin,6
+Groseille,fruit,juin,6
+Melon,fruit,juin,6
+Pamplemousse,fruit,juin,6
+Pastèque,fruit,juin,6
+Pêche,fruit,juin,6
+Pomme,fruit,juin,6
+Prune,fruit,juin,6
+Rhubarbe,fruit,juin,6
+Tomate,fruit,juin,6
+Avoine d'hiver,feculent,juin,6
+Avoine de printemps,feculent,juin,6
+Orge d'hiver,feculent,juin,6
+Pois,feculent,juin,6
+Seigle,feculent,juin,6
+Salade verte,legume,juillet,7
+Ail,legume,juillet,7
+Artichaut,legume,juillet,7
+Asperge,legume,juillet,7
+Aubergine,legume,juillet,7
+Betterave,legume,juillet,7
+Blette,legume,juillet,7
+Brocoli,legume,juillet,7
+Carotte,legume,juillet,7
+Céleri-branche,legume,juillet,7
+Chou romanesco,legume,juillet,7
+Concombre,legume,juillet,7
+Courgette,legume,juillet,7
+Epinards,legume,juillet,7
+Fenouil,legume,juillet,7
+Haricot vert,legume,juillet,7
+Laitue,legume,juillet,7
+Oignon,legume,juillet,7
+Petit pois,legume,juillet,7
+Poivron,legume,juillet,7
+Pomme de terre primeur,legume,juillet,7
+Radis,legume,juillet,7
+Abricot,fruit,juillet,7
+Amande fraiche,fruit,juillet,7
+Amande sèche,fruit,juillet,7
+Brugnon,fruit,juillet,7
+Cassis,fruit,juillet,7
+Cerise,fruit,juillet,7
+Figue,fruit,juillet,7
+Fraise,fruit,juillet,7
+Framboise,fruit,juillet,7
+Groseille,fruit,juillet,7
+Melon,fruit,juillet,7
+Myrtille,fruit,juillet,7
+Nectarine,fruit,juillet,7
+Pastèque,fruit,juillet,7
+Pêche,fruit,juillet,7
+Poire,fruit,juillet,7
+Prune,fruit,juillet,7
+Rhubarbe,fruit,juillet,7
+Tomate,fruit,juillet,7
+Avoine d'hiver,feculent,juillet,7
+Avoine de printemps,feculent,juillet,7
+Blé dur d'hiver et de printemps,feculent,juillet,7
+Blé tendre d'hiver et de printemps,feculent,juillet,7
+Féveroles et fèves,feculent,juillet,7
+Haricot blanc,feculent,juillet,7
+Maïs,feculent,juillet,7
+Orge d'hiver,feculent,juillet,7
+Orge de printemps,feculent,juillet,7
+Pois,feculent,juillet,7
+Seigle,feculent,juillet,7
+Haricots verts,legume,juillet,7
+Salade verte,legume,aout,8
+Ail,legume,aout,8
+Artichaut,legume,aout,8
+Aubergine,legume,aout,8
+Betterave,legume,aout,8
+Blette,legume,aout,8
+Brocoli,legume,aout,8
+Carotte,legume,aout,8
+Céleri-branche,legume,aout,8
+Chou blanc,legume,aout,8
+Chou romanesco,legume,aout,8
+Chou rouge,legume,aout,8
+Concombre,legume,aout,8
+Courge,legume,aout,8
+Courgette,legume,aout,8
+Epinards,legume,aout,8
+Fenouil,legume,aout,8
+Frisée,legume,aout,8
+Haricot vert,legume,aout,8
+Laitue,legume,aout,8
+Oignon,legume,aout,8
+Poivron,legume,aout,8
+Pomme de terre primeur,legume,aout,8
+Radis,legume,aout,8
+Abricot,fruit,aout,8
+Amande fraiche,fruit,aout,8
+Amande sèche,fruit,aout,8
+Baie de goji,fruit,aout,8
+Brugnon,fruit,aout,8
+Cassis,fruit,aout,8
+Figue,fruit,aout,8
+Fraise,fruit,aout,8
+Framboise,fruit,aout,8
+Groseille,fruit,aout,8
+Melon,fruit,aout,8
+Mirabelle,fruit,aout,8
+Mûre,fruit,aout,8
+Myrtille,fruit,aout,8
+Nectarine,fruit,aout,8
+Noisette,fruit,aout,8
+Pastèque,fruit,aout,8
+Pêche,fruit,aout,8
+Poire,fruit,aout,8
+Pomme,fruit,aout,8
+Prune,fruit,aout,8
+Pruneau,fruit,aout,8
+Raisin,fruit,aout,8
+Tomate,fruit,aout,8
+Avoine d'hiver,feculent,aout,8
+Avoine de printemps,feculent,aout,8
+Blé dur d'hiver et de printemps,feculent,aout,8
+Blé tendre d'hiver et de printemps,feculent,aout,8
+Féveroles et fèves,feculent,aout,8
+Haricot blanc,feculent,aout,8
+Maïs,feculent,aout,8
+Orge d'hiver,feculent,aout,8
+Orge de printemps,feculent,aout,8
+Pois,feculent,aout,8
+Quinoa,feculent,aout,8
+Seigle,feculent,aout,8
+Haricots verts,legume,aout,8
+Salade verte,legume,septembre,9
+Haricots verts,legume,septembre,9
+Ail,legume,septembre,9
+Artichaut,legume,septembre,9
+Aubergine,legume,septembre,9
+Betterave,legume,septembre,9
+Blette,legume,septembre,9
+Brocoli,legume,septembre,9
+Carotte,legume,septembre,9
+Céleri-branche,legume,septembre,9
+Chou,legume,septembre,9
+Chou blanc,legume,septembre,9
+Chou de Bruxelles,legume,septembre,9
+Chou-fleur,legume,septembre,9
+Chou frisé,legume,septembre,9
+Chou romanesco,legume,septembre,9
+Chou rouge,legume,septembre,9
+Concombre,legume,septembre,9
+Courge,legume,septembre,9
+Courgette,legume,septembre,9
+Epinards,legume,septembre,9
+Fenouil,legume,septembre,9
+Frisée,legume,septembre,9
+Haricot vert,legume,septembre,9
+Laitue,legume,septembre,9
+Oignon,legume,septembre,9
+Panais,legume,septembre,9
+Patate douce,legume,septembre,9
+Poireau,legume,septembre,9
+Poivron,legume,septembre,9
+Pomme de terre de conservation,legume,septembre,9
+Potiron,legume,septembre,9
+Radis,legume,septembre,9
+Amande sèche,fruit,septembre,9
+Baie de goji,fruit,septembre,9
+Coing,fruit,septembre,9
+Figue,fruit,septembre,9
+Melon,fruit,septembre,9
+Mirabelle,fruit,septembre,9
+Mûre,fruit,septembre,9
+Myrtille,fruit,septembre,9
+Noisette,fruit,septembre,9
+Noix,fruit,septembre,9
+Pastèque,fruit,septembre,9
+Pêche,fruit,septembre,9
+Poire,fruit,septembre,9
+Pomme,fruit,septembre,9
+Prune,fruit,septembre,9
+Pruneau,fruit,septembre,9
+Raisin,fruit,septembre,9
+Tomate,fruit,septembre,9
+Haricot blanc,feculent,septembre,9
+Maïs,feculent,septembre,9
+Quinoa,feculent,septembre,9
+Riz,feculent,septembre,9
+Sarrasin,feculent,septembre,9
+Tournesol,feculent,septembre,9
+Salade verte,legume,octobre,10
+Ail,legume,octobre,10
+Aubergine,legume,octobre,10
+Betterave,legume,octobre,10
+Blette,legume,octobre,10
+Brocoli,legume,octobre,10
+Carotte,legume,octobre,10
+Céleri-branche,legume,octobre,10
+Céleri,legume,octobre,10
+Chou,legume,octobre,10
+Chou blanc,legume,octobre,10
+Chou de Bruxelles,legume,octobre,10
+Chou-fleur,legume,octobre,10
+Chou frisé,legume,octobre,10
+Chou rouge,legume,octobre,10
+Concombre,legume,octobre,10
+Courge,legume,octobre,10
+Courgette,legume,octobre,10
+Echalote,legume,octobre,10
+Endive,legume,octobre,10
+Epinards,legume,octobre,10
+Fenouil,legume,octobre,10
+Frisée,legume,octobre,10
+Haricot vert,legume,octobre,10
+Laitue,legume,octobre,10
+Navet,legume,octobre,10
+Oignon,legume,octobre,10
+Panais,legume,octobre,10
+Patate douce,legume,octobre,10
+Poireau,legume,octobre,10
+Pomme de terre de conservation,legume,octobre,10
+Potiron,legume,octobre,10
+Radis,legume,octobre,10
+Rutabaga,legume,octobre,10
+Salsifi,legume,octobre,10
+Topinambour,legume,octobre,10
+Amande sèche,fruit,octobre,10
+Baie de goji,fruit,octobre,10
+Châtaigne,fruit,octobre,10
+Citron,fruit,octobre,10
+Coing,fruit,octobre,10
+Figue,fruit,octobre,10
+Framboise,fruit,octobre,10
+Kaki,fruit,octobre,10
+Myrtille,fruit,octobre,10
+Noisette,fruit,octobre,10
+Noix,fruit,octobre,10
+Physalis,fruit,octobre,10
+Poire,fruit,octobre,10
+Pomme,fruit,octobre,10
+Raisin,fruit,octobre,10
+Tomate,fruit,octobre,10
+Haricot blanc,feculent,octobre,10
+Maïs,feculent,octobre,10
+Quinoa,feculent,octobre,10
+Riz,feculent,octobre,10
+Sarrasin,feculent,octobre,10
+Soja,feculent,octobre,10
+Salade verte,legume,novembre,11
+Ail,legume,novembre,11
+Betterave,legume,novembre,11
+Brocoli,legume,novembre,11
+Cardon,legume,novembre,11
+Carotte,legume,novembre,11
+Céleri-branche,legume,novembre,11
+Céleri,legume,novembre,11
+Chou,legume,novembre,11
+Chou blanc,legume,novembre,11
+Chou de Bruxelles,legume,novembre,11
+Chou-fleur,legume,novembre,11
+Chou frisé,legume,novembre,11
+Chou rouge,legume,novembre,11
+Citrouille,legume,novembre,11
+Courge,legume,novembre,11
+Crosne,legume,novembre,11
+Echalote,legume,novembre,11
+Endive,legume,novembre,11
+Epinards,legume,novembre,11
+Fenouil,legume,novembre,11
+Frisée,legume,novembre,11
+Mâche,legume,novembre,11
+Navet,legume,novembre,11
+Oignon,legume,novembre,11
+Panais,legume,novembre,11
+Poireau,legume,novembre,11
+Pomme de terre de conservation,legume,novembre,11
+Potiron,legume,novembre,11
+Radis,legume,novembre,11
+Rutabaga,legume,novembre,11
+Salsifi,legume,novembre,11
+Topinambour,legume,novembre,11
+Amande sèche,fruit,novembre,11
+Châtaigne,fruit,novembre,11
+Citron,fruit,novembre,11
+Clémentine,fruit,novembre,11
+Coing,fruit,novembre,11
+Kaki,fruit,novembre,11
+Kiwi,fruit,novembre,11
+Mandarine,fruit,novembre,11
+Orange,fruit,novembre,11
+Physalis,fruit,novembre,11
+Poire,fruit,novembre,11
+Pomme,fruit,novembre,11
+Maïs,feculent,novembre,11
+Salade verte,legume,décembre,12
+Ail,legume,décembre,12
+Betterave,legume,décembre,12
+Carotte,legume,décembre,12
+Céleri-branche,legume,décembre,12
+Céleri,legume,décembre,12
+Chou,legume,décembre,12
+Chou blanc,legume,décembre,12
+Chou de Bruxelles,legume,décembre,12
+Chou frisé,legume,décembre,12
+Chou rouge,legume,décembre,12
+Courge,legume,décembre,12
+Crosne,legume,décembre,12
+Echalote,legume,décembre,12
+Endive,legume,décembre,12
+Epinards,legume,décembre,12
+Frisée,legume,décembre,12
+Mâche,legume,décembre,12
+Navet,legume,décembre,12
+Oignon,legume,décembre,12
+Panais,legume,décembre,12
+Poireau,legume,décembre,12
+Pomme de terre de conservation,legume,décembre,12
+Potiron,legume,décembre,12
+Radis,legume,décembre,12
+Rutabaga,legume,décembre,12
+Salsifi,legume,décembre,12
+Topinambour,legume,décembre,12
+Amande sèche,fruit,décembre,12
+Châtaigne,fruit,décembre,12
+Citron,fruit,décembre,12
+Clémentine,fruit,décembre,12
+Kaki,fruit,décembre,12
+Kiwi,fruit,décembre,12
+Mandarine,fruit,décembre,12
+Orange,fruit,décembre,12
+Physalis,fruit,décembre,12
+Poire,fruit,décembre,12
+Pomme,fruit,décembre,12
+Avoine d'hiver,feculent,décembre,12
+Avoine de printemps,feculent,décembre,12
+Blé dur d'hiver et de printemps,feculent,décembre,12
+Blé tendre d'hiver et de printemps,feculent,décembre,12
+Féveroles et fèves,feculent,décembre,12
+Orge d'hiver,feculent,décembre,12
+Orge de printemps,feculent,décembre,12
+Pois,feculent,décembre,12
+Seigle,feculent,décembre,12
+Fruit de saison,fruit,janvier,1
+Fruit de saison,fruit,février,2
+Fruit de saison,fruit,mars,3
+Fruit de saison,fruit,avril,4
+Fruit de saison,fruit,mai,5
+Fruit de saison,fruit,juin,6
+Fruit de saison,fruit,juillet,7
+Fruit de saison,fruit,aout,8
+Fruit de saison,fruit,septembre,9
+Fruit de saison,fruit,octobre,10
+Fruit de saison,fruit,novembre,11
+Fruit de saison,fruit,décembre,12
