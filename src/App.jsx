@@ -169,7 +169,7 @@ function App () {
 
         <Typography variant="body1" gutterBottom>
           Dans cette phase exploratoire, l'idéal est d'utiliser des outils que l'on maitrise déjà et qui permettre de produire
-          différent type de graphiques rapidement pour mieux comprendre les données et décidier si une piste d'analyse est intéressante à creuser davantage.
+          différent type de graphiques rapidement.
         </Typography>
 
         <Typography variant="h5" className={classes.title} color="secondary">
@@ -177,6 +177,17 @@ function App () {
         </Typography>
 
         <Typography variant="body1" gutterBottom>
+          Du texte ici ?
+        </Typography>
+
+        <ImageCard
+          imgSrc="data_studio_tool.png"
+          title="Data Studio (Google)"
+          description="Interface de Data Studio : une zone de mise en page et une zone de configuration qui permet d'ajouter des fichiers et construire des graphiques étape par étape."
+        />
+
+        <Typography variant="body1" gutterBottom>
+          Dans le cadre de ce projet, nous avons utilisé :
           <ul>
             <li><b>Data Studio</b> (pour Florian) : + / - </li>
             <li><b>Notebook Observable et la librairie Plot</b> (pour Edith) : + - </li>
@@ -184,6 +195,29 @@ function App () {
           </ul>
           Mais d'autres sont aussi très intéressants : en restant côté Python <i>(seaborn, plotly)</i>, nocode avec Tableau / Excel, R avec shiny ...
         </Typography>
+
+        <ImageCard
+          imgSrc="observable_tool.png"
+          title="Observable"
+          description="Interface d'Observable : un peu comme un notebook mais en Javascript, on peut utiliser d3.js mais aussi d'autres librairies de visualisations comme Plot ou vega lite."
+        />
+
+        <Typography variant="body1" gutterBottom>
+          Le but ? utiliser des graphiques simples pour mieux comprendre les données et décider si une piste
+          d'analyse est intéressante à creuser davantage ou non.
+        </Typography>
+
+        <Typography variant="body1" gutterBottom>
+          C'est aussi l'occasion de commencer à réfléchir à des représentation intéressante. En fonction de mon message, ce que je veux montrer, quel
+          type de graphique serait le plus intéressant ? Nous avons expérimenté d'autres types de réprésentation que nous avons gardé
+          avec ces outils ou développé par ailleurs ensuite.
+        </Typography>
+
+        <ImageCard
+          imgSrc="too_many_charts.jpg"
+          title="Trop de graphiques ..."
+          description="Trop de graphiques ... pas lisibles, il y en a dans tous les sens, mais c'est ça l'exploration !"
+        />
 
         <Typography variant="h4" className={classes.title} color="primary">
           🌟 Nos trouvailles
@@ -195,7 +229,7 @@ function App () {
         </Typography>
 
         <Typography variant="h5" className={classes.title} color="secondary">
-          Consommation de viandes et poissons
+          1/ Consommation de viandes et poissons
         </Typography>
 
         <Typography variant="body1" gutterBottom>
@@ -240,7 +274,7 @@ function App () {
         </Typography>
 
         <Typography variant="h5" className={classes.title} color="secondary">
-          Saisons
+          2/ Saisons
         </Typography>
 
         <Typography variant="body1" gutterBottom>
@@ -350,25 +384,37 @@ function App () {
         </Typography>
 
         <Typography variant="h5" className={classes.title} color="secondary">
-          Produits bio et produits industriels
+          3/ Produits bio et produits industriels
         </Typography>
 
         <Typography variant="body1" gutterBottom>
-          Qu'est-ce que l'on peut apprendre sur le menu des cantines grâce à l'open data
-          et à la dataviz ? C'est la question que l'on s'est posé (Florian Melki et Edith Maulandi).
+          Texte
         </Typography>
       </ContentLayout>
 
       <BioPercentChart config={isSmallScreen ? 'smallScreen' : 'default'} />
 
       <ContentLayout>
+        <Typography variant="body1" gutterBottom>
+          Texte
+        </Typography>
+
+        <ImageCard
+          imgSrc="ketchup.png"
+          title="Ketchup"
+          description="On peut aussi regarder un seul aliment en particulier ! Est-ce qu'on mange toujours du ketchup ?"
+        />
+
+        <Typography variant="body1" gutterBottom>
+          Texte
+        </Typography>
+
         <Typography variant="h4" className={classes.title} color="primary">
           ⏭️ Pour la suite
         </Typography>
 
         <Typography variant="body1" gutterBottom>
-          Qu'est-ce que l'on peut apprendre sur le menu des cantines grâce à l'open data
-          et à la dataviz ? C'est la question que l'on s'est posé (Florian Melki et Edith Maulandi).
+          Texte
         </Typography>
       </ContentLayout>
 
