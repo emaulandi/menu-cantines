@@ -48,9 +48,14 @@ const Footer = () => {
               Méthodologie
             </Typography>
             <Typography variant="body1" gutterBottom>
-              Vous pourrez retrouver le code de ce site sur <Link className={classes.niceLink} href="#">github</Link> , ainsi que
-              le notebook python pour le traitement des données.
-              Le notebook d'exploration des saisonalités est également disponible.
+              Vous pourrez retrouver le code de ce site sur <Link className={classes.niceLink} href="https://github.com/emaulandi/menu-cantines">github</Link>
+              , ainsi que :
+              <ul>
+                <li>
+                  le <Link className={classes.niceLink} href="https://github.com/emaulandi/menu-cantines/tree/master/data-processing">notebook python</Link> pour le traitement des données et les fichiers en entrée / sortie
+                </li>
+                <li>les notebook Observable sur <Link className={classes.niceLink} href="https://observablehq.com/d/857101b245272036">les menus</Link> et <Link className={classes.niceLink} href="https://observablehq.com/d/aff01d184f7d36d5">les saisonalités</Link></li>
+              </ul>
             </Typography>
             <Typography variant="body1" gutterBottom>
               La favicon pomme est designée par <Link className={classes.niceLink} href="https://openmoji.org/">OpenMoji</Link>
