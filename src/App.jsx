@@ -67,7 +67,7 @@ function App () {
         </Typography>
 
         <Typography variant="h4" className={classes.title} color="primary">
-          Comment choisir un jeu de données et le manipuler ?
+          🗃 Comment choisir un jeu de données et le manipuler ?
         </Typography>
 
         <Typography variant="h5" className={classes.title} color="secondary">
@@ -164,7 +164,7 @@ function App () {
         </Typography>
 
         <Typography variant="h4" className={classes.title} color="primary">
-          Exploration visuelle
+          📊 Exploration visuelle
         </Typography>
 
         <Typography variant="body1" gutterBottom>
@@ -186,7 +186,7 @@ function App () {
         </Typography>
 
         <Typography variant="h4" className={classes.title} color="primary">
-          Nos trouvailles
+          🌟 Nos trouvailles
         </Typography>
 
         <Typography variant="body1" gutterBottom>
@@ -363,7 +363,7 @@ function App () {
 
       <ContentLayout>
         <Typography variant="h4" className={classes.title} color="primary">
-          Pour la suite
+          ⏭️ Pour la suite
         </Typography>
 
         <Typography variant="body1" gutterBottom>
