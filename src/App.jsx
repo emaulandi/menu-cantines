@@ -46,6 +46,11 @@ const useStyles = makeStyles(theme => ({
     margin: theme.spacing(2, 0),
     opacity: 0.3,
   },
+  spacedList: {
+    '& li': {
+      marginBottom:  theme.spacing(1),
+    },
+  },
 }));
 
 function App () {
@@ -128,7 +133,7 @@ function App () {
         <Typography variant="body1" gutterBottom>
           Armés d'huile de coude, de feuilles de calcul partagées et d'un environnement de travail Python partagé <i>(Jupyter Notebook)</i>,
           nous avons traité le fichier pour apporter plus d'informations catégoriques à partir du champ <span className={classes.strong}>plat</span> disponible :
-          <ul>
+          <ul className={classes.spacedList}>
             <li>Création d'une liste d'aliment parmi : viande rouge / viande blanche / poisson et fruit de mer / legume / fruit / laitage</li>
             <li>Etiquettage de chaque plat avec ces catégories avec un <span className={classes.strong}>objectif de couvrir au moins 95% des plats</span></li>
             <li>Création d'un liste de plat pour pointer aussi les produits préparés et industriels et définir leur composition en catégorie d'aliment</li>
@@ -157,7 +162,7 @@ function App () {
 
         <Typography variant="body1" gutterBottom>
           Des <span className={classes.strong}>limites importantes</span> sont aussi à noter :
-          <ul>
+          <ul className={classes.spacedList}>
             <li>Pour le bio, nous avons utilisé la mention dans le texte libre du champ, c'est déclaratif. Il est aussi possible que cette mention ne soit pas présente et qu'un aliment soit bio, où qu'elle soit utilisée différement au cours du temps.</li>
             <li>Pour les plats préparé et industriel <i>(hachis parmentier, ratatouille…)</i> comme différencier à partir du texte si c'est un plat préparé sur place ou industriel ? <i>(exemple : "Poêlée ratatouille Bonduelle", "ratatouille", "ratatouille maison")</i></li>
           </ul>
@@ -188,7 +193,7 @@ function App () {
 
         <Typography variant="body1" gutterBottom>
           Dans le cadre de ce projet, nous avons utilisé :
-          <ul>
+          <ul className={classes.spacedList}>
             <li><b>Data Studio</b> (pour Florian) : + / - </li>
             <li><b>Notebook Observable et la librairie Plot</b> (pour Edith) : + - </li>
             <li><b>D3.js</b> (pour Florian) : + - </li>
@@ -256,7 +261,7 @@ function App () {
 
         <Typography variant="body1" gutterBottom>
           Les <span className={classes.strong}>limites</span> :
-          <ul>
+          <ul className={classes.spacedList}>
             <li>Il est important de vérifier d'éventuels trous dans les données. On voit facilement avec la vue calendrier qu'il manque des données sur plusieurs mois en 2013, mais cela peut être moins évident dans des vue plus générale.</li>
             <li>On peut noter dans la vue calendrier qu'il y a des jours sans données, et des jours avec viande rouge et blanche : il faudrait vérifier plus attentivement le processus de catégorisation</li>
           </ul>
@@ -348,7 +353,7 @@ function App () {
       <ContentLayout>
         <Typography variant="body1" gutterBottom>
           Les <span className={classes.strong}>limites</span> :
-          <ul>
+          <ul className={classes.spacedList}>
             <li>Cette analyse se base sur SOURCE qui n'inclut pas banane / ananas car hors France ➡️ différentes notions de "saison" peuvent être choisies</li>
             <li>On trouve un fruit / legume correspondant pour 67% des plats identifiés comme tel en utilisant le texte libre. Les plats préparés et industriel ne sont pas détaillé par aliment spécifique et donc non pris en compte <i>(ex: on ne compte donc pas la pomme de terre dans le hachis parmentier)</i></li>
             <li>On utilise le fruit / legume que l'on trouve dans le texte sans distinction, et on passe outre des nuances importantes. Par exemple la compote de pomme a surement été frabriquée à la récolte des fruits et donc de saison. Hors ici elle va être catégorisée "hors saison".</li>
@@ -357,7 +362,7 @@ function App () {
 
         <Typography variant="body1" gutterBottom>
           À noter côté <span className={classes.strong}>dataviz</span> :
-          <ul>
+          <ul className={classes.spacedList}>
             <li>Vue général et statistique vs vue détaillée plus relatable</li>
             <li>Simple ou fancy, les but de la dataviz Lisa Charlotte Muth</li>
           </ul>
@@ -365,7 +370,7 @@ function App () {
 
         <Typography variant="body1" gutterBottom>
           À noter côté <span className={classes.strong}>data</span> :
-          <ul>
+          <ul className={classes.spacedList}>
             <li>Il est souvent intéressant d'<b>enrichir</b> un jeu de données avec jeu de données complémentaire. Posez-vous la question dès le début du projet : <i>"Quelles autres informations pourraient être intéressantes avec celles dont je dispose déjà ?"</i></li>
             <li>Pas de jeux de données disponibles ? Dans certains cas, on peut en <b>construire soi-même</b> ! Ici nous avons utilisé un site listant les produits de saisons et l'avons mis en forme de tableau pour pouvoir l'exploiter facilement.</li>
           </ul>
@@ -399,7 +404,7 @@ function App () {
 
         <Typography variant="body1" gutterBottom>
           Les <span className={classes.strong}>limites</span> :
-          <ul>
+          <ul className={classes.spacedList}>
             <li>Bio declaratif</li>
             <li>Qu'est-ce qu'on produit industriel ?</li>
           </ul>
@@ -407,7 +412,7 @@ function App () {
 
         <Typography variant="body1" gutterBottom>
           À noter côté <span className={classes.strong}>data</span> :
-          <ul>
+          <ul className={classes.spacedList}>
             <li>Général vs particulier : 1 éléménet parmis tous ex: ketchup</li>
           </ul>
         </Typography>
