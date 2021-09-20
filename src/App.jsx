@@ -1,7 +1,7 @@
 /* eslint-disable max-len */
 import React from 'react';
 
-import { Typography } from '@material-ui/core';
+import { Typography, Link } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
 import Header from './components/Header';
@@ -30,14 +30,14 @@ const useStyles = makeStyles(theme => ({
     borderRadius: '2px',
   },
   niceLink: {
-    color: 'black',
-    background: theme.palette.primary.main,
+    color: 'white',
+    background: theme.palette.secondary.light,
     padding: '2px 5px',
     borderRadius: '2px',
 
     '&:hover': {
       background: 'grey',
-      color: 'white',
+      color: 'black',
       textDecoration: 'none',
     },
   },
@@ -90,7 +90,7 @@ function App () {
             <li>Le menu des cantines de <span className={classes.strong}>Toulouse</span> : très bien formaté, il n'est disponible que sur une fenêtre temporelle glissante</li>
             <li>Le menu des cantines de <span className={classes.strong}>Nantes</span> : non standardisé, il couvre 9 ans d'historique de 20211 à 2019</li>
           </ul>
-          Nous avons retenu ce dernier pour sa periode étendue.
+          Nous avons retenu <Link className={classes.niceLink} target="_blank" rel="noreferrer" href="https://data.nantesmetropole.fr/explore/dataset/244400404_menus-cantines-nantes-2011-2019/table/">ce dernier</Link> pour sa periode étendue.
         </Typography>
 
         <Typography variant="body1" gutterBottom>
@@ -325,7 +325,8 @@ function App () {
 
       <ContentLayout>
         <Typography variant="body1" gutterBottom>
-          Nous avons aussi essayé de définir les produits industriels et étudier leur consommation. On entend
+          Nous avons aussi essayé de définir les produits industriels <i>(dans le sens non préparé sur place)</i> et étudier leur consommation. Il a été intéressant de constater qu'un nombre
+          non négligeable de produits étaient à la fois bio et industriels, notamment pour les desserts et les laitages.
         </Typography>
 
         <ImageCard
@@ -333,10 +334,6 @@ function App () {
           title="Ketchup"
           description="On peut aussi regarder un seul aliment en particulier ! Est-ce que l'on mange toujours du ketchup ? (Nombre de plat avec la mention 'ketchup' par an)"
         />
-
-        <Typography variant="body1" gutterBottom>
-          Texte
-        </Typography>
 
         <Typography variant="body1" gutterBottom>
           Les <span className={classes.strong}>limites</span> :
@@ -359,7 +356,8 @@ function App () {
 
         <Typography variant="body1" gutterBottom>
           Concernant les fruits et légumes, nous avons ajouté au cours de l'analyse une nouvemme pise d'exploration : <b>la saisonnalité</b>. Est-ce que les fruits et légumes consommés sont de saison ?
-          Pour pouvoir répondre à cette question, nous avons créer un jeu de données complémentaire à partir du site de Greenpeace listant la saisonalité des produits. METTRE LIEN.
+          Pour pouvoir répondre à cette question, nous avons créer un jeu de données complémentaire à partir du site de Greenpeace listant
+          la  <Link className={classes.niceLink} href="https://www.greenpeace.fr/guetteur/calendrier/" target="_blank" rel="noreferrer">saisonalité des produits</Link>.
         </Typography>
 
         <Typography variant="body1" gutterBottom>
@@ -416,8 +414,8 @@ function App () {
         </Typography>
 
         <Typography variant="body1" gutterBottom>
-          Dans sa conférence <a href="https://lisacharlottemuth.com/2017/03/10/why-do-we-visualize-data/">Why do we visualize data ?</a>, Lisa Muth de Datawrapper
-          nous questionne sur nos buts en réalisant des visualisations de données. Veut-on créer :
+          Dans sa conférence <Link className={classes.niceLink} href="https://lisacharlottemuth.com/2017/03/10/why-do-we-visualize-data/" target="_blank" rel="noreferrer">Why do we visualize data ?</Link>
+          , Lisa Muth de Datawrapper nous questionne sur nos buts en réalisant des visualisations de données. Veut-on créer :
           <ul>
             <li>de l'<b>attention</b> et de la <b>beauté</b> ?</li>
             <li>de la <b>compréhension</b> ?</li>
