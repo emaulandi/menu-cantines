@@ -208,13 +208,13 @@ function App () {
         />
 
         <Typography variant="body1" gutterBottom>
-          Le but ? utiliser des graphiques simples pour mieux comprendre les données et décider si une piste
-          d'analyse est intéressante à creuser davantage ou non.
+          Le but ? utiliser des graphiques simples pour <b>mieux comprendre les données</b>
+          et <span className={classes.strong}>décider si une piste d'analyse</span> est intéressante à creuser davantage ou non.
         </Typography>
 
         <Typography variant="body1" gutterBottom>
-          C'est aussi l'occasion de commencer à réfléchir à des représentation intéressante. En fonction de mon message, ce que je veux montrer, quel
-          type de graphique serait le plus intéressant ? Nous avons expérimenté d'autres types de réprésentation que nous avons gardé
+          C'est aussi l'occasion de commencer à réfléchir à des représentation intéressante. En fonction de mon message, ce que je veux montrer,
+          <b>quel type de graphique serait le plus intéressant ?</b> Nous avons expérimenté d'autres types de réprésentation que nous avons gardé
           avec ces outils ou développé par ailleurs ensuite.
         </Typography>
 
