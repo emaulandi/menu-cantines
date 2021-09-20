@@ -118,11 +118,10 @@ function App () {
           Voici les pistes que nous avons listé à ce stade :
           <ul>
             <li>Y a-t-il des cycles ?</li>
-            <li>Diversification / quali ?</li>
-            <li>Quels types de légumes ?</li>
-            <li>Présence de produits transformé ?</li>
+            <li>Quels types de légumes / fruits sont les plus présents ?</li>
+            <li>Il y a-t-il des produits transformés ?</li>
+            <li>Quelle est l'évolution de la proportion des types d'aliments et de la composition d'un repas <i>(apparition légumineuses, repas végétarien ...)</i> au cours du temps ?</li>
             <li>Quid du bio ?</li>
-            <li>Evolution de la proportion des types d'aliments et de la composition d'un repas <i>(apparition légumineuses, repas végé...)</i> au cours du temps</li>
           </ul>
         </Typography>
 
@@ -160,14 +159,6 @@ function App () {
           </ul>
         </Typography>
 
-        <Typography variant="body1" gutterBottom>
-          Des <span className={classes.strong}>limites importantes</span> sont aussi à noter :
-          <ul className={classes.spacedList}>
-            <li>Pour le bio, nous avons utilisé la mention dans le texte libre du champ, c'est déclaratif. Il est aussi possible que cette mention ne soit pas présente et qu'un aliment soit bio, où qu'elle soit utilisée différement au cours du temps.</li>
-            <li>Pour les plats préparé et industriel <i>(hachis parmentier, ratatouille…)</i> comme différencier à partir du texte si c'est un plat préparé sur place ou industriel ? <i>(exemple : "Poêlée ratatouille Bonduelle", "ratatouille", "ratatouille maison")</i></li>
-          </ul>
-        </Typography>
-
         <Typography variant="h4" className={classes.title} color="primary">
           📊 Exploration visuelle
         </Typography>
@@ -181,10 +172,6 @@ function App () {
           Les outils
         </Typography>
 
-        <Typography variant="body1" gutterBottom>
-          Du texte ici ?
-        </Typography>
-
         <ImageCard
           imgSrc="data_studio_tool.png"
           title="Data Studio (Google)"
@@ -192,11 +179,29 @@ function App () {
         />
 
         <Typography variant="body1" gutterBottom>
-          Dans le cadre de ce projet, nous avons utilisé :
+          Dans le cadre de ce projet, nous avons utilisé les outils suivant :
           <ul className={classes.spacedList}>
-            <li><b>Data Studio</b> (pour Florian) : + / - </li>
-            <li><b>Notebook Observable et la librairie Plot</b> (pour Edith) : + - </li>
-            <li><b>D3.js</b> (pour Florian) : + - </li>
+            <li><b>Data Studio</b> (pour Florian) :</li>
+            <ul>
+              <li> + Outil “no code”</li>
+              <li> + Rapide pour la recherche exploratoire</li>
+              <li> + Interactif</li>
+              <li> + Gratuit</li>
+              <li> - Limité dans les représentations offertes</li>
+              <li> - Pas toujours clair pour les calculs</li>
+            </ul>
+            <li><b>Notebook Observable et la librairie Plot</b> (pour Edith) :</li>
+            <ul>
+              <li> + Notebook reactif dans le navigateur, rapide à mettre en place”</li>
+              <li> + Des librairies disponibles pour explorer les données facilement + multiples exemples</li>
+              <li> + Expérimentation et intégration future avec d3 facilité</li>
+              <li> - Nécessite des connaissances de bases en Javascript</li>
+            </ul>
+            <li><b>D3.js</b> (pour Florian) :</li>
+            <ul>
+              <li> + Rapide pour prototyper des représentations spécifiques</li>
+              <li> - Long pour rendre un produit abouti</li>
+            </ul>
           </ul>
           Mais d'autres sont aussi très intéressants : en restant côté Python <i>(seaborn, plotly)</i>, nocode avec Tableau / Excel, R avec shiny ...
         </Typography>
@@ -238,7 +243,26 @@ function App () {
         </Typography>
 
         <Typography variant="body1" gutterBottom>
-          Texte
+          Les catégories d'aliments ajoutés dans la phase précédente nous ont permi d'explorer leur évolutions dans le temps.
+          Nous étions particulièrement curieux de voir, peut-être, une évolution de la consommation de viande entre 2011
+          et 2020.
+        </Typography>
+
+        <ImageCard
+          imgSrc="viande_general.png"
+          title="Nombre de plats avec viande"
+          description="Nombre de plat avec viande par mois au cours du temps"
+        />
+
+        <Typography variant="body1" gutterBottom>
+          Au global, on peut voir une petite diminution du nombre de plat contenant de la viande par mois <i>(en mettant de côté plusieurs mois en 2013 où nous avons des données manquantes). </i>
+          Cette vue étant très générale, nous avons exploré d'autres manières de représenter l'évolution de la consommation de viande.
+        </Typography>
+
+        <Typography variant="body1" gutterBottom>
+          Nous avons retenue une vue calendrier, car elle permet de "s'imaginer" à la cantine, une case représentant un jour. Il est moins évident
+          de voir une tendance globale en quelques secondes, mais c'est l'occasion d'explorer la visualisation et de se "créer" une interprétation
+          à partir de cette vue par jour.
         </Typography>
 
         <iframe
@@ -260,6 +284,17 @@ function App () {
         />
 
         <Typography variant="body1" gutterBottom>
+          Avec cette représentation sous format de calendrier, on peut regarder d'abord les cases plus foncées, représentant une journée sans viande.
+          Il est plus compliqué ici de voir une évolution année par année de la commation de viande.
+        </Typography>
+
+        <Typography variant="body1" gutterBottom>
+          Cependant, un autre aspect intéressant de cette représentation est de grouper les menus par jour de la semaine, et cela peut nous permettre
+          de découvrir des patterns : voyez-vous quelque chose de spécifique le vendredi ? Apparement, le poisson est toujours au rendez-vous
+          les vendredis, et ce depuis 2011 !
+        </Typography>
+
+        <Typography variant="body1" gutterBottom>
           Les <span className={classes.strong}>limites</span> :
           <ul className={classes.spacedList}>
             <li>Il est important de vérifier d'éventuels trous dans les données. On voit facilement avec la vue calendrier qu'il manque des données sur plusieurs mois en 2013, mais cela peut être moins évident dans des vue plus générale.</li>
@@ -270,17 +305,71 @@ function App () {
         <Typography variant="body1" gutterBottom>
           À noter côté <span className={classes.strong}>dataviz</span> :
           <ul>
-            <li>Vue général et statistique vs vue détaillée plus relatable</li>
-            <li>deux</li>
+            <li>Il est intéressant d'expérimenter plusieurs niveau de détails : une vue générale <i>(total par mois)</i> et une vue détaillée par jour plus facile à appréhender peuvent être complémentaires.</li>
+            <li>Utiliser ces différents niveaux d'agrégation est intéressant pour découvrir des patterns dans les données</li>
           </ul>
         </Typography>
 
         <Typography variant="h5" className={classes.title} color="secondary">
-          2/ Saisons
+          2/ Produits bio et produits industriels
         </Typography>
 
         <Typography variant="body1" gutterBottom>
+          Comme pour l'évolution de la consommation de viandes, nous avons regardé la quantité de produits bio au cours du temps.
+          Ici on représente mois par mois le pourcentage moyen de produits bio par jour. On peut noter une augmentation à partir de
+          2016 où l'on passe régulièrement au dessus de 15% jusqu'à atteindre 25% certains mois.
+        </Typography>
+      </ContentLayout>
+
+      <BioPercentChart config={isSmallScreen ? 'smallScreen' : 'default'} />
+
+      <ContentLayout>
+        <Typography variant="body1" gutterBottom>
+          Nous avons aussi essayé de définir les produits industriels et étudier leur consommation. On entend
+        </Typography>
+
+        <ImageCard
+          imgSrc="ketchup.png"
+          title="Ketchup"
+          description="On peut aussi regarder un seul aliment en particulier ! Est-ce que l'on mange toujours du ketchup ? (Nombre de plat avec la mention 'ketchup' par an)"
+        />
+
+        <Typography variant="body1" gutterBottom>
           Texte
+        </Typography>
+
+        <Typography variant="body1" gutterBottom>
+          Les <span className={classes.strong}>limites</span> :
+          <ul className={classes.spacedList}>
+            <li>Ici on utilise la mention "bio" dans le libellé des plats. C'est un élément déclaratif : il est possible que la quantité de bio ait été régulière depuis 2011, mais mieux indiqué dans les données au fil du temps.</li>
+            <li>Pour les plats préparé et industriel <i>(hachis parmentier, ratatouille…)</i>, il n'est pas forcément facile de différencier à partir du texte si c'est un plat préparé sur place ou industriel <i>(exemple : "Poêlée ratatouille Bonduelle", "ratatouille", "ratatouille maison")</i>. La catégorisation est à améliorer.</li>
+          </ul>
+        </Typography>
+
+        <Typography variant="body1" gutterBottom>
+          À noter côté <span className={classes.strong}>dataviz</span> :
+          <ul className={classes.spacedList}>
+            <li>Pour raconter une histoire, il peut être intéressant de partir d'un élément particulier parmi tous pour attirer l'attention sur un produit connu, ici le ketchup.</li>
+          </ul>
+        </Typography>
+
+        <Typography variant="h5" className={classes.title} color="secondary">
+          3/ Saisons
+        </Typography>
+
+        <Typography variant="body1" gutterBottom>
+          Concernant les fruits et légumes, nous avons ajouté au cours de l'analyse une nouvemme pise d'exploration : <b>la saisonnalité</b>. Est-ce que les fruits et légumes consommés sont de saison ?
+          Pour pouvoir répondre à cette question, nous avons créer un jeu de données complémentaire à partir du site de Greenpeace listant la saisonalité des produits. METTRE LIEN.
+        </Typography>
+
+        <Typography variant="body1" gutterBottom>
+          Dans le traitement des données, nous avons rajouté une étape qui détermine pour chaque plat contenant un fruit / légume si celui-ci existe dans la "base" de saisonalité
+          et si oui, indique si la date du plat correspond à un mois où ce produit est de saison.
+        </Typography>
+
+        <Typography variant="body1" gutterBottom>
+          Nous avons compté par mois <i>(sans détail par année)</i>, le nombre de fois où le produit a été consommé en comptant positivement la consommation un mois de saison,
+          et négativement un mois <b>hors</b> saison.
         </Typography>
 
         <iframe
@@ -293,7 +382,11 @@ function App () {
         />
 
         <Typography variant="body1" gutterBottom>
-          Texte
+          Dans cette représentation en grille, les colonnes représentent les mois, les lignes un fruit ou légume. On retrouve en haut les produits les plus consommés.
+        </Typography>
+
+        <Typography variant="body1" gutterBottom>
+          <span className={classes.strong}> Légumes</span>
         </Typography>
 
         <iframe
@@ -306,7 +399,7 @@ function App () {
         />
 
         <Typography variant="body1" gutterBottom>
-          Texte
+          <span className={classes.strong}> Fruits</span>
         </Typography>
 
         <iframe
@@ -319,7 +412,28 @@ function App () {
         />
 
         <Typography className={classes.title} variant="h6" color="secondary">
-          D'autres représentations plus sophistiquées ?
+          D'autres représentations plus originales ?
+        </Typography>
+
+        <Typography variant="body1" gutterBottom>
+          Dans sa conférence <a href="https://lisacharlottemuth.com/2017/03/10/why-do-we-visualize-data/">Why do we visualize data ?</a>, Lisa Muth de Datawrapper
+          nous questionne sur nos buts en réalisant des visualisations de données. Veut-on créer :
+          <ul>
+            <li>de l'<b>attention</b> et de la <b>beauté</b> ?</li>
+            <li>de la <b>compréhension</b> ?</li>
+            <li>de l'<b>implication</b> ?</li>
+          </ul>
+        </Typography>
+
+        <ImageCard
+          imgSrc="whyvisualize.png"
+          title="Why do we visualize data ?"
+          description="Pourquoi visualise-t-on des données ? Les buts de la visualisation expliqués avec brio par Lisa Muth"
+        />
+
+        <Typography variant="body1" gutterBottom>
+          Bien sur ces buts peuvent être combinés, mais c'est en fonction d'eux que l'on ferra des choix de représentations. Le format en grille plus haut nous semble
+          pertinent pour la <b>compréhension</b>. Nous avons donc fait aussi l'exercice de trouver un autre format pour travailler le but de capter l'attention, plus axé sur l'esthétique.
         </Typography>
 
         <AlimentRadial
@@ -330,7 +444,13 @@ function App () {
         />
 
         <Typography variant="body1" gutterBottom>
-          Texte
+          En utilisant l'aspect cyclique des mois, nous avons créé avec D3 et à partir d'exemples existant sur Observable, un graphique en barre radial par semaine.
+          Ici on double l'encodage lié à saison / hors saison : en plus de la couleur, nous utlisons l'axe y pour séparer dans l'espace les valeurs positives et négatives
+          pour marquer encore plus cet aspect visuellement.
+        </Typography>
+
+        <Typography variant="body1" gutterBottom>
+          Est-ce que cela peut fonctionner pour plusieurs produits ? Prenons l'exemple pour les 10 fruits et 10 légumes les plus consommés :
         </Typography>
 
         <hr className={classes.separator} />
@@ -354,7 +474,7 @@ function App () {
         <Typography variant="body1" gutterBottom>
           Les <span className={classes.strong}>limites</span> :
           <ul className={classes.spacedList}>
-            <li>Cette analyse se base sur SOURCE qui n'inclut pas banane / ananas car hors France ➡️ différentes notions de "saison" peuvent être choisies</li>
+            <li>Cette analyse se base sur un référentiel qui n'inclut pas banane / ananas car hors France ➡️ différentes notions de "saison" peuvent être choisies</li>
             <li>On trouve un fruit / legume correspondant pour 67% des plats identifiés comme tel en utilisant le texte libre. Les plats préparés et industriel ne sont pas détaillé par aliment spécifique et donc non pris en compte <i>(ex: on ne compte donc pas la pomme de terre dans le hachis parmentier)</i></li>
             <li>On utilise le fruit / legume que l'on trouve dans le texte sans distinction, et on passe outre des nuances importantes. Par exemple la compote de pomme a surement été frabriquée à la récolte des fruits et donc de saison. Hors ici elle va être catégorisée "hors saison".</li>
           </ul>
@@ -363,8 +483,13 @@ function App () {
         <Typography variant="body1" gutterBottom>
           À noter côté <span className={classes.strong}>dataviz</span> :
           <ul className={classes.spacedList}>
-            <li>Vue général et statistique vs vue détaillée plus relatable</li>
-            <li>Simple ou fancy, les but de la dataviz Lisa Charlotte Muth</li>
+            <li>
+              Dans la représentation radiale, on se heure à deux <b>"mensonges"</b>. D'abord, les barres sont déformés du fait de l'axe radial.
+              On ne représente plus exactement les données dans ce cas, l'axe négatif étant de fait réduit. Par ailleurs, on n'a pas définit de règles
+              quand aux produits qui n'ont que des valeurs positivies / négatives. Dans ce cas, les valeurs prennent plus d'espace et on ne peux pas facilement
+              <b>comparer</b> les fruits/légumes entre eux, la représentation peut être <b>trompeuse</b>.
+            </li>
+            <li>Dans quel contexte et dans quel objectif visualisez-vous ? Il est toujours utilise de se reposer la question à chaque étape du projet.</li>
           </ul>
         </Typography>
 
@@ -376,53 +501,38 @@ function App () {
           </ul>
         </Typography>
 
-        <Typography variant="h5" className={classes.title} color="secondary">
-          3/ Produits bio et produits industriels
-        </Typography>
-
-        <Typography variant="body1" gutterBottom>
-          Texte
-        </Typography>
-      </ContentLayout>
-
-      <BioPercentChart config={isSmallScreen ? 'smallScreen' : 'default'} />
-
-      <ContentLayout>
-        <Typography variant="body1" gutterBottom>
-          Texte
-        </Typography>
-
-        <ImageCard
-          imgSrc="ketchup.png"
-          title="Ketchup"
-          description="On peut aussi regarder un seul aliment en particulier ! Est-ce qu'on mange toujours du ketchup ?"
-        />
-
-        <Typography variant="body1" gutterBottom>
-          Texte
-        </Typography>
-
-        <Typography variant="body1" gutterBottom>
-          Les <span className={classes.strong}>limites</span> :
-          <ul className={classes.spacedList}>
-            <li>Bio declaratif</li>
-            <li>Qu'est-ce qu'on produit industriel ?</li>
-          </ul>
-        </Typography>
-
-        <Typography variant="body1" gutterBottom>
-          À noter côté <span className={classes.strong}>data</span> :
-          <ul className={classes.spacedList}>
-            <li>Général vs particulier : 1 éléménet parmis tous ex: ketchup</li>
-          </ul>
-        </Typography>
-
         <Typography variant="h4" className={classes.title} color="primary">
           ⏭️ Pour la suite
         </Typography>
 
         <Typography variant="body1" gutterBottom>
-          Texte
+          Déjà beaucoup d'éléments partagés, et pourtant beaucoup d'autres autres axes d'analyses auraient pu être investigués à partir de ce jeu de données
+          <i>relativement simple (date, plat)</i>. Nous espérons que l'explication du processus que nous avons suivi pourra <span className={classes.strong}>vous donner envie de mener vos propres projets</span>
+          ainsi que des pistes d'analyses et de représentations.
+        </Typography>
+
+        <Typography variant="body1" gutterBottom>
+          Pour résumer nos apprentissages, voici les <span className={classes.strong}>points clés</span> que nous voudrions vous transmettre à travers ce projet :
+        </Typography>
+
+        <Typography variant="body1" gutterBottom>
+          À noter côté <span className={classes.strong}>data</span> :
+          <ul className={classes.spacedList}>
+            <li><b>Etre conscient des limites du jeu de données</b> / de sa propre analyse / de son interprétation</li>
+            <li><b>Croiser avec les autres jeux de données</b> <i>(voire les construire)</i></li>
+            <li>La <b>dataviz est un bon outil pour explorer</b> des pistes, infirmer des hypothèses</li>
+            <li><b>Parler avec des gens du métier</b> : producteur de la donnée, praticien, politique...</li>
+          </ul>
+        </Typography>
+
+        <Typography variant="body1" gutterBottom>
+          À noter côté <span className={classes.strong}>dataviz</span> :
+          <ul className={classes.spacedList}>
+            <li><b>Concevoir ses visualisations</b> de données en fonction de son <b>auditoire</b> et de son <b>objectif</b></li>
+            <li><b>Expérimenter</b> et tester différents niveaux de granularité</li>
+            <li>Retravailler les données pour être plus <b>pertinent</b></li>
+            <li>Différents <b>types de rendus</b> : statique <i>(image, poster)</i>, exploratoire <i>(dashboard)</i>, site web, scrollytelling … à aligner aves ses objectifs</li>
+          </ul>
         </Typography>
       </ContentLayout>
 
