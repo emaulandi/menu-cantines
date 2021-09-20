@@ -90,11 +90,11 @@ function App () {
             <li>Le menu des cantines de <span className={classes.strong}>Toulouse</span> : très bien formaté, il n'est disponible que sur une fenêtre temporelle glissante</li>
             <li>Le menu des cantines de <span className={classes.strong}>Nantes</span> : non standardisé, il couvre 9 ans d'historique de 20211 à 2019</li>
           </ul>
-          Nous avons retenu <Link className={classes.niceLink} target="_blank" rel="noreferrer" href="https://data.nantesmetropole.fr/explore/dataset/244400404_menus-cantines-nantes-2011-2019/table/">ce dernier</Link> pour sa periode étendue.
+          Nous avons retenu <Link className={classes.niceLink} target="_blank" rel="noreferrer" href="https://data.nantesmetropole.fr/explore/dataset/244400404_menus-cantines-nantes-2011-2019/table/">ce dernier</Link> pour sa période étendue.
         </Typography>
 
         <Typography variant="body1" gutterBottom>
-          Le fichier des menus des cantines de Nantes contient uniquement deux colones :
+          Le fichier des menus des cantines de Nantes contient uniquement deux colonnes :
           une <span className={classes.strong}>date</span> et un <span className={classes.strong}>plat</span> <i>(texte libre)</i>.
           En parcourant rapidement le fichier, nous avons vu que ce champ plat en texte libre allait nous donner du fil à retorde. Il faudrait
           passer un peu de temps à le traiter pour permettre des analyses intéressantes.
@@ -134,10 +134,10 @@ function App () {
           nous avons traité le fichier pour apporter plus d'informations catégoriques à partir du champ <span className={classes.strong}>plat</span> disponible :
           <ul className={classes.spacedList}>
             <li>Création d'une liste d'aliment parmi : viande rouge / viande blanche / poisson et fruit de mer / legume / fruit / laitage</li>
-            <li>Etiquettage de chaque plat avec ces catégories avec un <span className={classes.strong}>objectif de couvrir au moins 95% des plats</span></li>
+            <li>Étiquettage de chaque plat avec ces catégories avec un <span className={classes.strong}>objectif de couvrir au moins 95% des plats</span></li>
             <li>Création d'un liste de plat pour pointer aussi les produits préparés et industriels et définir leur composition en catégorie d'aliment</li>
-            <li>Création d'un liste de texte à exclure <i>(le champ plat étant aussi utilisé pour indiquer des évènements particuliers comme le repas de nöel)</i></li>
-            <li>Etiquettage des produits bio <i>(mention disponible dans champ plat)</i></li>
+            <li>Création d'un liste de texte à exclure <i>(le champ plat étant aussi utilisé pour indiquer des évènements particuliers comme le repas de Noël)</i></li>
+            <li>Étiquettage des produits bio <i>(mention disponible dans champ plat)</i></li>
             <li>Agrégation des lignes du même jour pour obtenir la pondération par jour des catégories d'aliments <i>(pour un jour donnée, nous pouvons voir le pourcentage de féculent, de bio ...)</i></li>
           </ul>
         </Typography>
@@ -146,7 +146,7 @@ function App () {
           imgSrc="process.png"
           title="Processus"
           description="Processus de traitement : à partir de l'étiquettage par catégorie, on ajoute une pondération
-          de présence des aliments plat par plat, puis on aggrège par jour."
+          de présence des aliments plat par plat, puis on agrège par jour."
         />
 
         <Typography variant="body1" gutterBottom>
@@ -164,7 +164,7 @@ function App () {
         </Typography>
 
         <Typography variant="body1" gutterBottom>
-          Dans cette phase exploratoire, l'idéal est d'utiliser des outils que l'on maitrise déjà et qui permettre de produire
+          Dans cette phase exploratoire, l'idéal est d'utiliser des outils que l'on maîtrise déjà et qui permettre de produire
           différent type de graphiques rapidement.
         </Typography>
 
@@ -213,7 +213,7 @@ function App () {
         />
 
         <Typography variant="body1" gutterBottom>
-          Le but ? utiliser des graphiques simples pour <b>mieux comprendre les données</b>
+          Le but ? utiliser des graphiques simples pour <b>mieux comprendre les données </b>
           et <span className={classes.strong}>décider si une piste d'analyse</span> est intéressante à creuser davantage ou non.
         </Typography>
 
@@ -234,7 +234,7 @@ function App () {
         </Typography>
 
         <Typography variant="body1" gutterBottom>
-          Après cette pahse d'exploration visuelle, nous avons choisit de retenir 3 axes particuliers sur lesquels se concentrer
+          Après cette phase d'exploration visuelle, nous avons choisit de retenir 3 axes particuliers sur lesquels se concentrer
           et produire des visualisations plus abouties.
         </Typography>
 
@@ -243,7 +243,7 @@ function App () {
         </Typography>
 
         <Typography variant="body1" gutterBottom>
-          Les catégories d'aliments ajoutés dans la phase précédente nous ont permi d'explorer leur évolutions dans le temps.
+          Les catégories d'aliments ajoutés dans la phase précédente nous ont permis d'explorer leur évolutions dans le temps.
           Nous étions particulièrement curieux de voir, peut-être, une évolution de la consommation de viande entre 2011
           et 2020.
         </Typography>
@@ -285,7 +285,7 @@ function App () {
 
         <Typography variant="body1" gutterBottom>
           Avec cette représentation sous format de calendrier, on peut regarder d'abord les cases plus foncées, représentant une journée sans viande.
-          Il est plus compliqué ici de voir une évolution année par année de la commation de viande.
+          Il est plus compliqué ici de voir une évolution année par année de la consommation de viande.
         </Typography>
 
         <Typography variant="body1" gutterBottom>
@@ -355,13 +355,13 @@ function App () {
         </Typography>
 
         <Typography variant="body1" gutterBottom>
-          Concernant les fruits et légumes, nous avons ajouté au cours de l'analyse une nouvemme pise d'exploration : <b>la saisonnalité</b>. Est-ce que les fruits et légumes consommés sont de saison ?
+          Concernant les fruits et légumes, nous avons ajouté au cours de l'analyse une nouvelle piste d'exploration : <b>la saisonnalité</b>. Est-ce que les fruits et légumes consommés sont de saison ?
           Pour pouvoir répondre à cette question, nous avons créer un jeu de données complémentaire à partir du site de Greenpeace listant
-          la  <Link className={classes.niceLink} href="https://www.greenpeace.fr/guetteur/calendrier/" target="_blank" rel="noreferrer">saisonalité des produits</Link>.
+          la  <Link className={classes.niceLink} href="https://www.greenpeace.fr/guetteur/calendrier/" target="_blank" rel="noreferrer">saisonnalité des produits</Link>.
         </Typography>
 
         <Typography variant="body1" gutterBottom>
-          Dans le traitement des données, nous avons rajouté une étape qui détermine pour chaque plat contenant un fruit / légume si celui-ci existe dans la "base" de saisonalité
+          Dans le traitement des données, nous avons rajouté une étape qui détermine pour chaque plat contenant un fruit / légume si celui-ci existe dans la "base" de saisonnalité
           et si oui, indique si la date du plat correspond à un mois où ce produit est de saison.
         </Typography>
 
@@ -380,7 +380,7 @@ function App () {
         />
 
         <Typography variant="body1" gutterBottom>
-          Dans cette représentation en grille, les colonnes représentent les mois, les lignes un fruit ou légume. On retrouve en haut les produits les plus consommés.
+          Dans cette visualisation en grille, les colonnes représentent les mois, les lignes un fruit ou légume. On retrouve en haut les produits les plus consommés.
         </Typography>
 
         <Typography variant="body1" gutterBottom>
@@ -430,7 +430,7 @@ function App () {
         />
 
         <Typography variant="body1" gutterBottom>
-          Bien sur ces buts peuvent être combinés, mais c'est en fonction d'eux que l'on ferra des choix de représentations. Le format en grille plus haut nous semble
+          Bien sur ces buts peuvent être combinés, mais c'est en fonction d'eux que l'on ferra des choix de représentation. Le format en grille plus haut nous semble
           pertinent pour la <b>compréhension</b>. Nous avons donc fait aussi l'exercice de trouver un autre format pour travailler le but de capter l'attention, plus axé sur l'esthétique.
         </Typography>
 
@@ -443,7 +443,7 @@ function App () {
 
         <Typography variant="body1" gutterBottom>
           En utilisant l'aspect cyclique des mois, nous avons créé avec D3 et à partir d'exemples existant sur Observable, un graphique en barre radial par semaine.
-          Ici on double l'encodage lié à saison / hors saison : en plus de la couleur, nous utlisons l'axe y pour séparer dans l'espace les valeurs positives et négatives
+          Ici on double l'encodage lié à saison / hors saison : en plus de la couleur, nous utilisons l'axe y pour séparer dans l'espace les valeurs positives et négatives
           pour marquer encore plus cet aspect visuellement.
         </Typography>
 
@@ -474,7 +474,7 @@ function App () {
           <ul className={classes.spacedList}>
             <li>Cette analyse se base sur un référentiel qui n'inclut pas banane / ananas car hors France ➡️ différentes notions de "saison" peuvent être choisies</li>
             <li>On trouve un fruit / legume correspondant pour 67% des plats identifiés comme tel en utilisant le texte libre. Les plats préparés et industriel ne sont pas détaillé par aliment spécifique et donc non pris en compte <i>(ex: on ne compte donc pas la pomme de terre dans le hachis parmentier)</i></li>
-            <li>On utilise le fruit / legume que l'on trouve dans le texte sans distinction, et on passe outre des nuances importantes. Par exemple la compote de pomme a surement été frabriquée à la récolte des fruits et donc de saison. Hors ici elle va être catégorisée "hors saison".</li>
+            <li>On utilise le fruit / legume que l'on trouve dans le texte sans distinction, et on passe outre des nuances importantes. Par exemple la compote de pomme a sûrement été fabriquée à la récolte des fruits et donc de saison. Hors ici elle va être catégorisée "hors saison".</li>
           </ul>
         </Typography>
 
@@ -484,8 +484,8 @@ function App () {
             <li>
               Dans la représentation radiale, on se heure à deux <b>"mensonges"</b>. D'abord, les barres sont déformés du fait de l'axe radial.
               On ne représente plus exactement les données dans ce cas, l'axe négatif étant de fait réduit. Par ailleurs, on n'a pas définit de règles
-              quand aux produits qui n'ont que des valeurs positivies / négatives. Dans ce cas, les valeurs prennent plus d'espace et on ne peux pas facilement
-              <b>comparer</b> les fruits/légumes entre eux, la représentation peut être <b>trompeuse</b>.
+              quand aux produits qui n'ont que des valeurs positives / négatives. Dans ce cas, les valeurs prennent plus d'espace et on ne peux pas facilement
+              <b> comparer</b> les fruits/légumes entre eux, la représentation peut être <b>trompeuse</b>.
             </li>
             <li>Dans quel contexte et dans quel objectif visualisez-vous ? Il est toujours utilise de se reposer la question à chaque étape du projet.</li>
           </ul>
@@ -505,7 +505,7 @@ function App () {
 
         <Typography variant="body1" gutterBottom>
           Déjà beaucoup d'éléments partagés, et pourtant beaucoup d'autres autres axes d'analyses auraient pu être investigués à partir de ce jeu de données
-          <i>relativement simple (date, plat)</i>. Nous espérons que l'explication du processus que nous avons suivi pourra <span className={classes.strong}>vous donner envie de mener vos propres projets</span>
+          <i> relativement simple (date, plat)</i>. Nous espérons que l'explication du processus que nous avons suivi pourra <span className={classes.strong}>vous donner envie de mener vos propres projets </span>
           ainsi que des pistes d'analyses et de représentations.
         </Typography>
 
@@ -529,7 +529,7 @@ function App () {
             <li><b>Concevoir ses visualisations</b> de données en fonction de son <b>auditoire</b> et de son <b>objectif</b></li>
             <li><b>Expérimenter</b> et tester différents niveaux de granularité</li>
             <li>Retravailler les données pour être plus <b>pertinent</b></li>
-            <li>Différents <b>types de rendus</b> : statique <i>(image, poster)</i>, exploratoire <i>(dashboard)</i>, site web, scrollytelling … à aligner aves ses objectifs</li>
+            <li>Différents <b>types de rendus</b> : statique <i>(image, poster)</i>, exploratoire <i>(dashboard)</i>, site web, scrollytelling … à aligner avec ses objectifs</li>
           </ul>
         </Typography>
       </ContentLayout>
